@@ -12,6 +12,7 @@ const Home = () => {
           {/* <Link to="/checkout" className="links-hover-color links-active-color">Checkout</Link> */}
 
           <Link to="/cart">Cart</Link>
+          <Link to="/checkout">Checkout</Link>
         </div>
       </nav>
     </>

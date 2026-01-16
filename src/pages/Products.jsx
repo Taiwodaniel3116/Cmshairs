@@ -15,6 +15,9 @@ const Products = ({addToCart, totalQuantity}) => {
         <Link to="/cart">
           Cart
         </Link>
+        <Link to="/checkout">
+          Checkout
+        </Link>
 
          <div className="text-[13px] text-white absolute left-3.75 top-0">
             {totalQuantity}
@@ -30,12 +33,12 @@ const Products = ({addToCart, totalQuantity}) => {
     </div>
 
     {/* Products */}
-         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
+         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8  mt-10">
         {products.map((product) => (
           <div key={product.id}>
-            {/* <div className="pb-5 border-blue-300 border-2 shadow-2xl shadow-blue-400"> */}
-              <div className="border-2 border-white rounded-3xl mt-10 mx-2 px-2 py-4 shadow-2xl shadow-black-300">
-                <img className="w-38 h-40" src={product.image} />
+            <div className="pb-5 border-gray-200 border-2 shadow-2xl shadow-gray-300">
+              <div className="border-2 border-gray-200 rounded-3xl mt-10 mx-2 px-2 py-4">
+                <img className="w-38 h-40 hover:shadow-white shadow-2xl active:shadow-white" src={product.image} />
               </div>
               <p className="ml-3 pt-3 font-bold">{product.name}</p>
               <p className="ml-3 pt-2 text-[17px] font-bold text-green-800">${product.price}</p>
@@ -44,13 +47,13 @@ const Products = ({addToCart, totalQuantity}) => {
                {/* Add to cart button */}
               <div className="flex justify-center mt-2">
                 <button
-                  className="bg-green-800 px-9 py-1.5 rounded-full text-white cursor-pointer"
+                  className="bg-green-900 hover:bg-green-700 active:bg-green-700 duration-300 px-9 py-1.5 rounded-full text-white cursor-pointer"
                   onClick={() => addToCart(product)}
                 >
                   Add to cart
                 </button>
               </div>
-            {/* </div> */}
+            </div>
           </div>
         ))}
       </div>

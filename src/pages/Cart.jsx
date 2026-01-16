@@ -23,6 +23,9 @@ const Cart = (
       <Link to="/products">
           Products
         </Link>
+      <Link to="/checkout">
+          checkout
+        </Link>
     </nav>
     {/*  */}
      <h1 className='font-bold text-4xl text-center pb-3'>Shopping Cart</h1>
@@ -53,13 +56,13 @@ const Cart = (
               
               <div className="mt-2">
                 <button
-                  className="font-bold text-3xl w-10 mr-3 rounded-full border border-gray-400 cursor-pointer hover:bg-amber-400 duration-300"
+                  className="font-bold text-3xl w-10 mr-3 rounded-full border border-gray-400 cursor-pointer hover:bg-amber-400 active:bg-amber-400 duration-300"
                   onClick={() => decreaseQuantity(id)}
                 >
                   -
                 </button>
                 <button
-                  className="font-bold text-3xl w-10 mr-3 rounded-full border border-gray-400 cursor-pointer hover:bg-amber-400 duration-300"
+                  className="font-bold text-3xl w-10 mr-3 rounded-full border border-gray-400 cursor-pointer hover:bg-amber-400 active:bg-amber-400 duration-300"
                   onClick={() => increaseQuanity(id)}
                 >
                   {/* ➕ */}
@@ -96,7 +99,7 @@ const Cart = (
         </div>
       </div>
 
-      <div className="mt-7 mb-2 w-fit h-max m-auto font-semibold bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-3 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-500">
+      <div className="mt-7 mb-2 w-fit h-max m-auto font-semibold bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-3 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700">
         <Link to="/checkout">Proceed to Checkout</Link>
       </div>
     </>

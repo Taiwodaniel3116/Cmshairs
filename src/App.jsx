@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import { products } from "./data/product";
@@ -126,6 +127,15 @@ function App() {
               />
             }
           />
+
+          <Route 
+            path="/checkout" 
+            element={
+            <Checkout
+              cartItems={cartItems}
+              totalQuantity={totalQuantity}
+              totalPrice={totalPrice}
+            />}/>
         </Routes>
       </Router>
       {/* <Home/>
