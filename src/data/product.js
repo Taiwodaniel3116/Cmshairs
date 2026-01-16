@@ -1,17 +1,20 @@
-const products = [
+export const products = [
   {
    id: "1",
   //  image: "/images/adults-plain-cotton-tshirt-2-pack-teal.jpg",
    image: "/images/adults-plain-cotton-tshirt-2-pack-teal.jpg",
-   name: "Adult Cotton T-Shirt",
+   name: "Brazillian Straight Lace Front Wig",
    price: 200,
    quantity: 1
   },
   {
    id: "2",
    image: "/images/backpack.jpg",
-   name: "Black Backpack",
+   name: "Deep Curly Bundle",
    price: 65,
    quantity: 1
   },
 ]
+
+// Adult Cotton T-Shirt
+//Black Backpack
