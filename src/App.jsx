@@ -100,7 +100,7 @@ function App() {
       <Router>
         {/* <Products/> */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home totalQuantity={totalQuantity}/>} />
 
           <Route
             path="/products"

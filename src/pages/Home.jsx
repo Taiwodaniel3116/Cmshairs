@@ -1,20 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
-const Home = () => {
+const Home = ({ totalQuantity }) => {
   return (
     <>
       <nav className="flex justify-between px-2">
-        <h1 className="uppercase text-green-700 font-bold">CMSHAIRS</h1>
+        <Link to="/" className="uppercase text-green-700 font-bold">
+          CMSHAIRS
+        </Link>
 
-        <div>
+        <div className="flex gap-2 text-green-700 font-semibold">
           <Link to="/products">Products</Link>
-          {/* <Link to="/checkout" className="links-hover-color links-active-color">Checkout</Link> */}
-
           <Link to="/cart">Cart</Link>
           <Link to="/checkout">Checkout</Link>
         </div>
+
+        <div className="text-[15px] text-green-900 font-bold">
+          🛒{totalQuantity}
+        </div>
       </nav>
+
+      <div className="mb-0 pb-0">
+        <Footer />
+      </div>
     </>
   );
 };

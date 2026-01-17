@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
   const phoneNumber = "2349027396272";
@@ -25,12 +26,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
 
   return (
     <>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/cart">Cart</Link>
-
-        {/* <Link to="/cart" className="flex items-center relative ml-10">
+      {/* <Link to="/cart" className="flex items-center relative ml-10">
           <img
             src="/images/icons/cart-icon.png"
             alt="cart icon"
@@ -40,11 +36,24 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
             {totalQuantity}
           </div>
         </Link> */}
+
+      <nav className="flex justify-between px-2">
+        <Link to="/" className="uppercase text-green-700 font-bold">
+          CMSHAIRS
+        </Link>
+
+        <div className="flex gap-2 text-green-700 font-semibold">
+          <Link to="/">Home</Link>
+          <Link to="/products">Products</Link>
+          <Link to="/cart">Cart</Link>
+        </div>
+
+        <div className="text-[15px] text-green-900 font-bold">
+          🛒{totalQuantity}
+        </div>
       </nav>
       {/*  */}
-      <div className="font-bold text-center text-3xl">
-       Order Summary
-      </div>
+      <div className="font-bold text-center text-3xl">Order Summary</div>
 
       <div className="grid grid-cols-2 mb-3 bg-white w-[80%] py-5 px-2 rounded-3xl shadow-2xl shadow-gray-300 md:w-100 m-auto border-2 border-gray-200">
         {cartItems.map((cartItem, id) => (
@@ -71,19 +80,14 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
 
       {/*  */}
       <div className="flex flex-col gap-5 bg-white w-75 m-auto px-3 py-2 rounded-2xl border-2 border-gray-200">
-
         <div className="flex justify-between">
           <span className="text-black font-bold ">Discount:</span>
-          <span className="text-green-900 font-bold line-through">
-            $0.00
-          </span>
+          <span className="text-green-900 font-bold line-through">$0.00</span>
         </div>
 
         <div className="flex justify-between">
           <span className="text-black font-bold ">Shipping:</span>
-          <span className="text-green-900 font-bold line-through">
-            $0.00
-          </span>
+          <span className="text-green-900 font-bold line-through">$0.00</span>
         </div>
 
         <div className="flex justify-between">
@@ -99,7 +103,6 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
             ${totalPrice.toFixed(2)}
           </span>
         </div>
-
       </div>
       {/*  */}
 
@@ -112,6 +115,8 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
           Complete Order via Whatsapp{" "}
         </button>
       </div>
+
+      <Footer />
     </>
   );
 };
