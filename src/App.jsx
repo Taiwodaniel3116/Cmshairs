@@ -95,6 +95,12 @@ function App() {
     return total + cartItem.price * cartItem.quantity;
   }, 0); //Array initial value
 
+  // Clear All Cart Items //
+  function clearCartItems() {
+    const clearTtems = setCartItems([]);
+    console.log("Cart Items cleared");
+  }
+
   return (
     <>
       <Router>
@@ -124,6 +130,7 @@ function App() {
                decreaseQuantity={decreaseQuantity}
                removeItem={removeItem}
                totalPrice={totalPrice}
+               clearCartItems={clearCartItems}
               />
             }
           />

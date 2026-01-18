@@ -37,7 +37,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
           </div>
         </Link> */}
 
-      <nav className="flex justify-between px-2">
+      <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4">
         <Link to="/" className="uppercase text-green-700 font-bold">
           CMSHAIRS
         </Link>
@@ -53,7 +53,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
         </div>
       </nav>
       {/*  */}
-      <div className="font-bold text-center text-3xl">Order Summary</div>
+      <div className="font-bold text-center text-4xl pt-5">Order Summary</div>
 
       <div className="grid grid-cols-2 mb-3 bg-white w-[80%] py-5 px-2 rounded-3xl shadow-2xl shadow-gray-300 md:w-100 m-auto border-2 border-gray-200">
         {cartItems.map((cartItem, id) => (

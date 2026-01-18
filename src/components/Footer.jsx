@@ -17,6 +17,7 @@ const Footer = () => {
 
           <nav className="text-white flex flex-col pt-3 text-[15px]">
             <Link to="/">Home</Link>
+            <Link to="/products">Products</Link>
             <Link to="/cart">Cart</Link>
             <Link to="/checkout">Checkout</Link>
           </nav>

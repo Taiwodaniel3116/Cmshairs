@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 const Products = ({ addToCart, totalQuantity }) => {
   return (
     <>
-      <nav className="flex justify-between px-2">
+      <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4">
         <Link to="/" className="uppercase text-green-700 font-bold">CMSHAIRS</Link>
 
         <div className="flex gap-2 text-green-700 font-semibold">
@@ -21,7 +21,7 @@ const Products = ({ addToCart, totalQuantity }) => {
       </nav>
       {/*  */}
 
-      <h1 className="font-bold text-4xl text-center"> Our Products</h1>
+      <h1 className="font-bold text-4xl text-center pt-5"> Our Products</h1>
       <p className="text-center mt-2">
         Discover our premium collection of hair extensions and wigs.
       </p>

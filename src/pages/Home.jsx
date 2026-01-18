@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 const Home = ({ totalQuantity }) => {
   return (
     <>
-      <nav className="flex justify-between px-2">
+      <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4">
         <Link to="/" className="uppercase text-green-700 font-bold">
           CMSHAIRS
         </Link>
