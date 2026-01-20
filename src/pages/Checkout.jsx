@@ -26,7 +26,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
   };
 
   return (
-    <>
+    <div className="animate-fadeIn">
       {/* <Link to="/cart" className="flex items-center relative ml-10">
           <img
             src="/images/icons/cart-icon.png"
@@ -40,7 +40,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
 
       <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4">
         <Link to="/" className="uppercase text-green-700 font-bold">
-          CMSHAIRS
+          CMSHAIRS👱‍♀️
         </Link>
 
         <div className="flex gap-2 text-green-700 font-semibold">
@@ -133,7 +133,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
         }
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

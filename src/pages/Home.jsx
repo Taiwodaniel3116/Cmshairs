@@ -7,7 +7,7 @@ const Home = ({ totalQuantity }) => {
     <div className="animate-fadeIn">
       <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4">
         <Link to="/" className="uppercase text-green-700 font-bold">
-          CMSHAIRS
+          CMSHAIRS👱‍♀️
         </Link>
 
         <div className="flex gap-2 text-green-700 font-semibold">
