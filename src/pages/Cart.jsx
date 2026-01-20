@@ -1,9 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { products } from "../data/product";
 import Footer from "../components/Footer";
 import EmptyCartState from "../components/EmptyCartState";
-import ProductsInCart from "../components/ProductsInCart";
 import { useState } from "react";
 
 const Cart = ({
@@ -17,10 +15,8 @@ const Cart = ({
   clearCartItems,
 }) => {
 
-  const [isInCart, setIsInCart] = useState(true);
-
   return (
-    <>
+    <div className="animate-fadeIn">
       <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4">
         <Link to="/" className="uppercase text-green-700 font-bold">
           CMSHAIRS
@@ -53,7 +49,7 @@ const Cart = ({
             </div>
       
           
-            <div className="w-max-content h-max-content border-2 border-gray-200 pt-3 px-3 rounded-2xl md:w-100 m-auto">
+            <div className="w-max-content h-max-content border-2 border-gray-200 pt-3 px-3 rounded-2xl md:w-100 m-auto animate-fadeIn">
               {cartItems.map((cartItem, id) => (
                 <div
                   key={id}
@@ -115,7 +111,7 @@ const Cart = ({
          }
         </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

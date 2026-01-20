@@ -58,7 +58,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
       <div>
         {
           cartItems.length === 0 ? <EmptyCartState/> :
-          <>
+          <div className="animate-fadeIn">
             <div className="font-bold text-center text-4xl pt-5">
               Order Summary
             </div>
@@ -129,7 +129,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
                 Complete Order via Whatsapp{" "}
               </button>
             </div>
-          </>
+          </div>
         }
       </div>
       <Footer />

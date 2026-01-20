@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 const Home = ({ totalQuantity }) => {
   return (
-    <>
+    <div className="animate-fadeIn">
       <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4">
         <Link to="/" className="uppercase text-green-700 font-bold">
           CMSHAIRS
@@ -24,7 +24,7 @@ const Home = ({ totalQuantity }) => {
       <div className="mb-0 pb-0">
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

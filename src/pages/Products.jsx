@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 const Products = ({ addToCart, totalQuantity }) => {
   return (
-    <>
+    <div className="animate-fadeIn">
       <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4">
         <Link to="/" className="uppercase text-green-700 font-bold">
           CMSHAIRS
@@ -77,28 +77,8 @@ const Products = ({ addToCart, totalQuantity }) => {
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 };
 
 export default Products;
-
-//  <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8'>
-//   {
-//     products.map((product) => (
-//       <div key={product.id}>
-//         <div className="border-2 border-white rounded-3xl mt-10 mx-2 px-2 py-4 shadow-2xl shadow-black-300">
-//             <img className="w-38 h-40" src={product.image} />
-//           </div>
-//         <p className='ml-3 pt-3 font-bold'>{product.name}</p>
-//         <p className='ml-3 pt-2 text-[17px] font-bold text-green-800'>${product.price}</p>
-
-//         <div className='flex justify-center mt-2'>
-//           <button className='bg-green-800 px-9 py-1.5 rounded-full text-white cursor-pointer'
-//           onClick={() => addToCart()}>Add to cart</button>
-//         </div>
-//         {/*  */}
-//       </div>
-//     ))
-//   }
-// </div>
