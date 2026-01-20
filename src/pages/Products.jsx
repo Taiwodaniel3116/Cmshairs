@@ -7,7 +7,9 @@ const Products = ({ addToCart, totalQuantity }) => {
   return (
     <>
       <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4">
-        <Link to="/" className="uppercase text-green-700 font-bold">CMSHAIRS</Link>
+        <Link to="/" className="uppercase text-green-700 font-bold">
+          CMSHAIRS
+        </Link>
 
         <div className="flex gap-2 text-green-700 font-semibold">
           <Link to="/">Home</Link>
@@ -50,6 +52,15 @@ const Products = ({ addToCart, totalQuantity }) => {
                 ${product.price}
               </p>
               <div>{product.button}</div>
+
+              {/* Colour */}
+              <div className="ml-3">
+                <input className="mr-2" type="radio" name="" id="" />
+
+                <input className="mr-2" type="radio" name="" id="" />
+
+                <input type="radio" name="" id="" />
+              </div>
 
               {/* Add to cart button */}
               <div className="flex justify-center mt-2">

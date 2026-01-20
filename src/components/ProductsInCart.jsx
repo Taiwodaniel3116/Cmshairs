@@ -1,25 +1,20 @@
-export const products = [
-  {
-   id: "1",
-  //  image: "/images/adults-plain-cotton-tshirt-2-pack-teal.jpg",
-   image: "/images/adults-plain-cotton-tshirt-2-pack-teal.jpg",
-   name: "Brazillian Straight Lace Front Wig",
-   price: 200,
-   quantity: 1,
-  },
-  {
-   id: "2",
-   image: "/images/backpack.jpg",
-   name: "Deep Curly Bundle",
-   price: 65,
-   quantity: 1
-  },
-]
+import React from 'react';
+import { products } from '../data/product';
+import { Link } from 'react-router-dom';
 
-// Adult Cotton T-Shirt
-//Black Backpack
-
-    {/* <h1 className="font-bold text-4xl text-center pb-3 pt-5">Shopping Cart</h1>
+const ProductsInCart = ({
+  cartItems,
+  setCartItems,
+  totalQuantity,
+  increaseQuanity,
+  decreaseQuantity,
+  removeItem,
+  totalPrice,
+  clearCartItems,
+}) => {
+  return (
+    <>
+      <h1 className="font-bold text-4xl text-center pb-3 pt-5">Shopping Cart</h1>
       <p className="text-center pb-8">Review your items and proceed to checkout</p>
 
       <div className="bg-gray-200 py-4 rounded-full w-90 flex items-center justify-between m-auto mb-5">
@@ -32,7 +27,7 @@ export const products = [
 
     
       <div className="w-max-content h-max-content border-2 border-gray-200 pt-3 px-3 rounded-2xl md:w-100 m-auto">
-        {cartItems.map((cartItem, id) => (
+        {products.map((cartItem, id) => (
           <div
             key={id}
             className="flex gap-2 border-2 border-white rounded-3xl mb-2 shadow shadow-gray-500"
@@ -84,8 +79,15 @@ export const products = [
         </div>
         <div className="flex justify-center">
         </div>
-      </div> */}
+      </div>
 
-      // <div className="mt-7 mb-2 w-fit h-max m-auto font-semibold bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-3 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700">
-      //   <Link to="/checkout">Proceed to Checkout</Link>
-      // </div> 
+      <div className="text-3xl font-bold text-center">There are products in the cart 🛒</div>
+
+      <div className="mt-7 mb-2 w-fit h-max m-auto font-semibold bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-3 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700">
+        <Link to="/checkout">Proceed to Checkout</Link>
+      </div> 
+    </>
+  )
+}
+
+export default ProductsInCart

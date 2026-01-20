@@ -1,5 +1,4 @@
 import "./App.css";
-// import { Link } from 'react-router-dom';
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
@@ -142,7 +141,8 @@ function App() {
               cartItems={cartItems}
               totalQuantity={totalQuantity}
               totalPrice={totalPrice}
-            />}/>
+            />}
+            />
         </Routes>
       </Router>
       {/* <Home/>
