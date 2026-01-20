@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const EmptyCartState = () => {
   return (
     <div className="animate-fadeIn motion-reduce:animate-none">
-    <div className="w-15 h-15 rounded-full bg-gray-200 m-auto mt-3 flex justify-center items-center">
+    <div className="w-15 h-15 rounded-full bg-gray-200 m-auto flex justify-center items-center mt-20">
       <div className="animate-bounce">🛒</div>
     </div>
       <div className="text-3xl font-bold text-center mt-5">Your Cart Is Empty</div>
-      <p className="text-center pt-2">
+      <p className="text-center pt-2 m-auto w-[35ch]">
         Looks like you haven't added any item to your cart yet. Start shopping
         to find your perfect hair!
       </p>

@@ -16,20 +16,23 @@ const Cart = ({
 }) => {
   return (
     <div className="animate-fadeIn">
-      <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4">
-        <Link to="/" className="uppercase text-green-700 font-bold">
+      <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4 fixed top-0 w-full bg-green-900">
+        <Link to="/" className="uppercase font-bold  text-white">
           CMSHAIRS👱‍♀️
         </Link>
 
-        <div className="flex gap-2 text-green-700 font-semibold">
+        <div className="flex gap-2 text-white font-semibold">
           <Link to="/">Home</Link>
           <Link to="/products">Products</Link>
           <Link to="/checkout">Checkout</Link>
         </div>
 
-        <div className="text-[15px] text-green-900 font-bold">
-          🛒{totalQuantity}
-        </div>
+        <Link to="/cart" className="font-bold relative">
+          🛒
+          <span className="absolute bottom-4 right-2 text-[12px] text-white ">
+            {totalQuantity}
+          </span>
+        </Link>
       </nav>
 
       <div>
@@ -37,7 +40,7 @@ const Cart = ({
           <EmptyCartState />
         ) : (
           <>
-            <h1 className="font-bold text-4xl text-center pb-3 pt-5">
+            <h1 className="font-bold text-4xl text-center pb-3 pt-5 mt-20">
               Shopping Cart
             </h1>
             <p className="text-center pb-8">

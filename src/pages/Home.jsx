@@ -16,9 +16,12 @@ const Home = ({ totalQuantity }) => {
           <Link to="/checkout">Checkout</Link>
         </div>
 
-        <div className="text-[15px] text-green-900 font-bold">
-          🛒{totalQuantity}
-        </div>
+        <Link to="/cart" className="font-bold relative">
+          🛒
+          <span className="">
+            {totalQuantity}
+          </span>
+        </Link>
       </nav>
 
       <div className="mb-0 pb-0">

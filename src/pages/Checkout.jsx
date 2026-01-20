@@ -38,28 +38,32 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
           </div>
         </Link> */}
 
-      <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4">
-        <Link to="/" className="uppercase text-green-700 font-bold">
+      <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4 fixed top-0 w-full bg-green-900">
+        <Link to="/" className="uppercase text-white font-bold">
           CMSHAIRS👱‍♀️
         </Link>
 
-        <div className="flex gap-2 text-green-700 font-semibold">
+        <div className="flex gap-2 text-white font-semibold">
           <Link to="/">Home</Link>
           <Link to="/products">Products</Link>
           <Link to="/cart">Cart</Link>
           {/* <Link to="/productsincart">ProductsInCart</Link> */}
         </div>
 
-        <div className="text-[15px] text-green-900 font-bold">
-          🛒{totalQuantity}
-        </div>
+        <Link to="/cart" className="font-bold relative">
+          🛒
+          <span className="absolute bottom-4 right-2 text-[12px] text-white ">
+            {totalQuantity}
+          </span>
+        </Link>
       </nav>
       {/*  */}
       <div>
-        {
-          cartItems.length === 0 ? <EmptyCartState/> :
+        {cartItems.length === 0 ? (
+          <EmptyCartState />
+        ) : (
           <div className="animate-fadeIn">
-            <div className="font-bold text-center text-4xl pt-5">
+            <div className="font-bold text-center text-4xl pt-5 mt-20">
               Order Summary
             </div>
 
@@ -130,7 +134,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
               </button>
             </div>
           </div>
-        }
+        )}
       </div>
       <Footer />
     </div>

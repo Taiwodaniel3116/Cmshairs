@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { products } from "../data/product";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import { PopChild } from "framer-motion";
 
 const Products = ({ addToCart, totalQuantity }) => {
   const [searchQuery, setSearchQuery] = useState(""); // stores what the user types.
@@ -14,24 +13,29 @@ const Products = ({ addToCart, totalQuantity }) => {
 
   return (
     <div className="animate-fadeIn">
-      <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4">
-        <Link to="/" className="uppercase text-green-700 font-bold">
+      <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4 fixed top-0 w-full bg-green-900">
+        <Link to="/" className="uppercase text-white font-bold">
           CMSHAIRS👱‍♀️
         </Link>
 
-        <div className="flex gap-2 text-green-700 font-semibold">
+        <div className="flex gap-2 text-white font-semibold">
           <Link to="/">Home</Link>
           <Link to="/cart">Cart</Link>
           <Link to="/checkout">Checkout</Link>
         </div>
-
-        <div className="text-[15px] text-green-900 font-bold">
-          🛒{totalQuantity}
-        </div>
+        <Link to="/cart" className="font-bold relative">
+          🛒
+          <span className="absolute bottom-4 right-2 text-[12px] text-white ">
+            {totalQuantity}
+          </span>
+        </Link>
       </nav>
       {/*  */}
 
-      <h1 className="font-bold text-4xl text-center pt-5"> Our Products</h1>
+      <h1 className="font-bold text-4xl text-center pt-5 mt-20">
+        {" "}
+        Our Products
+      </h1>
       <p className="text-center mt-2">
         Discover our premium collection of hair extensions and wigs.
       </p>
