@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { products } from "../data/product";
 import Footer from "../components/Footer";
 import EmptyCartState from "../components/EmptyCartState";
-import { useState } from "react";
+import NavBar from "../components/NavBar";
 
 const Cart = ({
   cartItems,
@@ -14,28 +14,17 @@ const Cart = ({
   totalPrice,
   clearCartItems,
 }) => {
+  const links = [
+    { label: "Home", to: "/" },
+    { label: "Products", to: "/products" },
+    { label: "checkout", to: "/checkout" },
+  ];
+
   return (
-    <div className="animate-fadeIn">
-      <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4 fixed top-0 w-full bg-green-900">
-        <Link to="/" className="uppercase font-bold  text-white">
-          CMSHAIRS👱‍♀️
-        </Link>
+    <div className="">
+      <NavBar links={links} totalQuantity={totalQuantity} />
 
-        <div className="flex gap-2 text-white font-semibold">
-          <Link to="/">Home</Link>
-          <Link to="/products">Products</Link>
-          <Link to="/checkout">Checkout</Link>
-        </div>
-
-        <Link to="/cart" className="font-bold relative">
-          🛒
-          <span className="absolute bottom-4 right-2 text-[12px] text-white ">
-            {totalQuantity}
-          </span>
-        </Link>
-      </nav>
-
-      <div>
+      <div className="animate-fadeIn">
         {cartItems.length === 0 ? (
           <EmptyCartState />
         ) : (

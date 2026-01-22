@@ -6,6 +6,7 @@ import Checkout from "./pages/Checkout";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import { products } from "./data/product";
+import NavBar from "./components/NavBar";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -105,7 +106,14 @@ function App() {
       <Router>
         {/* <Products/> */}
         <Routes>
-          <Route path="/" element={<Home totalQuantity={totalQuantity}/>} />
+          <Route 
+           path="/" 
+           element={
+           <Home 
+            totalQuantity={totalQuantity}
+            cartItems={cartItems}
+            />} 
+          />
 
           <Route
             path="/products"
@@ -145,9 +153,6 @@ function App() {
             />
         </Routes>
       </Router>
-      {/* <Home/>
-      <Products/>
-      <Cart/> */}
     </>
   );
 }

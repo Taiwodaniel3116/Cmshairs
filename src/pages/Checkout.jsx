@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import EmptyCartState from "../components/EmptyCartState";
+import NavBar from "../components/NavBar";
 
+// Whatsapp Order //
 const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
   const phoneNumber = "2349027396272";
 
@@ -25,8 +27,16 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
     window.open(whatsappURL, "_blank");
   };
 
+  //Navbar
+  const links = [
+    { label: "Home", to: "/" },
+    { label: "Products", to: "/products" },
+    { label: "Cart", to: "/cart" },
+  ];
+
   return (
-    <div className="animate-fadeIn">
+    <div>
+      <NavBar links={links} totalQuantity={totalQuantity} />
       {/* <Link to="/cart" className="flex items-center relative ml-10">
           <img
             src="/images/icons/cart-icon.png"
@@ -37,28 +47,9 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
             {totalQuantity}
           </div>
         </Link> */}
-
-      <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4 fixed top-0 w-full bg-green-900">
-        <Link to="/" className="uppercase text-white font-bold">
-          CMSHAIRS👱‍♀️
-        </Link>
-
-        <div className="flex gap-2 text-white font-semibold">
-          <Link to="/">Home</Link>
-          <Link to="/products">Products</Link>
-          <Link to="/cart">Cart</Link>
-          {/* <Link to="/productsincart">ProductsInCart</Link> */}
-        </div>
-
-        <Link to="/cart" className="font-bold relative">
-          🛒
-          <span className="absolute bottom-4 right-2 text-[12px] text-white ">
-            {totalQuantity}
-          </span>
-        </Link>
-      </nav>
       {/*  */}
-      <div>
+
+      <div className="animate-fadeIn">
         {cartItems.length === 0 ? (
           <EmptyCartState />
         ) : (

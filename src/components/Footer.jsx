@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <div className="bg-green-900 mt-20 pl-2">
-        <p className="text-white font-bold pb-5 pt-2">CMSHAIRS👱‍♀️</p>
+        <p className="text-white font-bold pb-5 pt-2 font-serif">CMSHAIRS👱‍♀️</p>
 
         <p className="text-white text-[15px]">
           Premium quality hair extensions and wigs. Ethically sourced, expertly
@@ -15,11 +15,11 @@ const Footer = () => {
         <div>
           <p className="text-white font-bold mt-4">Quick Links</p>
 
-          <nav className="text-white flex flex-col pt-3 text-[15px]">
-            <Link className="pb-2" to="/">Home</Link>
-            <Link className="pb-2" to="/products">Products</Link>
-            <Link className="pb-2" to="/cart">Cart</Link>
-            <Link to="/checkout">Checkout</Link>
+          <nav className="text-white flex flex-col pt-3 text-[15px] w-fit">
+            <Link className="pb-2 hover:text-yellow-500" to="/">Home</Link>
+            <Link className="pb-2 hover:text-yellow-500" to="/products">Products</Link>
+            <Link className="pb-2 hover:text-yellow-500" to="/cart">Cart</Link>
+            <Link className="hover:text-yellow-500" to="/checkout">Checkout</Link>
           </nav>
         </div>
 
