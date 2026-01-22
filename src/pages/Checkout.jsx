@@ -37,24 +37,13 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
   return (
     <div>
       <NavBar links={links} totalQuantity={totalQuantity} />
-      {/* <Link to="/cart" className="flex items-center relative ml-10">
-          <img
-            src="/images/icons/cart-icon.png"
-            alt="cart icon"
-            className="w-8 h-auto mr-3 mt-2"
-          />
-          <div className="text-[13px] text-blue-200 absolute left-3.75 top-0">
-            {totalQuantity}
-          </div>
-        </Link> */}
-      {/*  */}
 
       <div className="animate-fadeIn">
         {cartItems.length === 0 ? (
           <EmptyCartState />
         ) : (
           <div className="animate-fadeIn">
-            <div className="font-bold text-center text-4xl pt-5 mt-20">
+            <div className="font-bold text-center text-4xl pt-5 pb-2 mt-20 md:text-5xl">
               Order Summary
             </div>
 

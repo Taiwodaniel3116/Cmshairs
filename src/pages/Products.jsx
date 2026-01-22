@@ -25,11 +25,11 @@ const Products = ({ addToCart, totalQuantity }) => {
       {/*  */}
 
       <div className="animate-fadeIn">
-        <h1 className="font-bold text-4xl text-center pt-5 mt-20">
+        <h1 className="font-bold text-4xl text-center pt-5 mt-20 md:text-5xl">
           {" "}
           Our Products
         </h1>
-        <p className="text-center mt-2 m-auto w-[40ch]">
+        <p className="text-center mt-2 m-auto md:text-[20px]">
           Discover our premium collection of hair extensions and wigs.
         </p>
 
@@ -40,7 +40,7 @@ const Products = ({ addToCart, totalQuantity }) => {
             placeholder="Search products..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="bg-gray-100 px-10 py-2 rounded-full outline-gray-100 caret-green-400"
+            className="bg-gray-200 px-10 py-2 rounded-full outline-gray-100 caret-green-400 md:px-20"
           />
         </div>
 

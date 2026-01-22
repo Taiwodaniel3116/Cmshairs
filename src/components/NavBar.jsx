@@ -8,15 +8,15 @@ const NavBar = ({ totalQuantity, links }) => {
 
   return (
     <>
-      <nav className="border-b-2 border-b-gray-300 bg-green-900 text-white px-6 py-4">
+      <nav className="border-b-2 border-b-gray-300 bg-green-900 text-white px-6 py-5 md:py-6">
         <div className="flex items-center justify-between max-w-7xl mx-auto ">
           {/* Logo */}
-          <Link to="/" className="uppercase text-white font-bold font-serif">
+          <Link to="/" className="uppercase text-white font-bold font-serif md:text-2xl">
             cmshairs👱‍♀️
           </Link>
 
           {/* Desktop links */}
-          <ul className="hidden md:flex gap-6 items-center">
+          <ul className="hidden md:flex gap-6 items-center md:font-semibold">
             {links.map((link) =>
               link.label === "Cart" ? (
                 <li key={link.to}>
