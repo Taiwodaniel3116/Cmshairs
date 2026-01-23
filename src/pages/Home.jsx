@@ -18,13 +18,13 @@ const Home = ({ totalQuantity, cartItems }) => {
 
         {/* Hero section */}
         
-        <div className="pl-3 pt-15 h-dvh bg-green-900">
+        <div className="pl-3 pt-17 h-dvh bg-green-900">
           <span className="bg-white text-green-900 px-7 py-3 rounded-full text-xs font-semibold">New Collection 2026</span>
 
-          <h1 className="font-bold text-5xl/13 pt-9 pb-4 text-white ">
+          <h1 className="font-bold text-6xl/16 pt-10 pb-4 text-white ">
             Premium Quality Hair Extensions
           </h1>
-          <p className="text-white">
+          <p className="text-white text-[19px]">
             Transform your look with our luxurious collection of 100% human hair
             wigs and extensions. Ethically sourced, expertly crafted.
           </p>
