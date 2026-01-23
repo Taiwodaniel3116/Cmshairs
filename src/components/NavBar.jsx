@@ -87,16 +87,8 @@ const NavBar = ({ totalQuantity, links }) => {
         </div>
 
         {/* Mobile menu */}
-        <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-out 
-  ${
-    isOpen
-      ? "max-h-96 opacity-100 translate-y-0"
-      : "max-h-0 opacity-0 -translate-y-2"
-  }
-  bg-green-800`}
-        >
-          <ul className="space-y-4 px-6 pb-4 text-white">
+        {isOpen && (
+          <ul className="md:hidden bg-green-900 text-white space-y-4 px-6 pb-4">
             {links
               .filter((link) => link.label !== "Cart")
               .map((link) => (
@@ -104,17 +96,43 @@ const NavBar = ({ totalQuantity, links }) => {
                   <Link
                     to={link.to}
                     onClick={() => setIsOpen(false)}
-                    className="flex gap-3 py-2 px-4 rounded hover:bg-yellow-500 transition"
+                    className="flex gap-3 py-2 px-4  hover:bg-yellow-400 transtion rounded"
                   >
                     {link.label}
                   </Link>
                 </li>
               ))}
           </ul>
-        </div>
+        )}
       </nav>
     </>
   );
 };
 
 export default NavBar;
+
+//  <div
+//           className={`md:hidden overflow-hidden transition-all duration-300 ease-out
+//   ${
+//     isOpen
+//       ? "max-h-96 opacity-100 translate-y-0"
+//       : "max-h-0 opacity-0 -translate-y-2"
+//   }
+//   bg-green-800`}
+//         >
+//           <ul className="space-y-4 px-6 pb-4 text-white">
+//             {links
+//               .filter((link) => link.label !== "Cart")
+//               .map((link) => (
+//                 <li key={link.to}>
+//                   <Link
+//                     to={link.to}
+//                     onClick={() => setIsOpen(false)}
+//                     className="flex gap-3 py-2 px-4 rounded hover:bg-yellow-500 transition"
+//                   >
+//                     {link.label}
+//                   </Link>
+//                 </li>
+//               ))}
+//           </ul>
+//         </div>

@@ -37,11 +37,11 @@ const Cart = ({
             </p>
 
             <div className="bg-gray-200 py-4 rounded-full w-90 flex items-center justify-between m-auto mb-5">
-              <p className="text-[18px] font-bold pl-3">
+              <p className="text-[18px] font-semibold pl-5">
                 Cart items ({totalQuantity})
               </p>
               <span
-                className="text-red-400 text-[15px] font-semibold pr-3 cursor-pointer hover:text-red-600 active:text-red-600"
+                className="text-red-400 text-[15px] font-semibold pr-5 cursor-pointer hover:text-red-600 active:text-red-600"
                 onClick={clearCartItems}
               >
                 Clear All
