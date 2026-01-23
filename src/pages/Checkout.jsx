@@ -43,7 +43,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
           <EmptyCartState />
         ) : (
           <div className="animate-fadeIn">
-            <div className="font-bold text-center text-4xl pt-5 pb-2 mt-20 md:text-5xl">
+            <div className="font-bold text-center text-4xl pt-5 pb-2 mt-8 md:text-5xl">
               Order Summary
             </div>
 

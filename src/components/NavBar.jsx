@@ -1,92 +1,117 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CartIcon from "./CartIcon";
 
 const NavBar = ({ totalQuantity, links }) => {
-
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <nav className="border-b-2 border-b-gray-300 bg-green-900 text-white px-6 py-5 md:py-6">
-        <div className="flex items-center justify-between max-w-7xl mx-auto ">
-          {/* Logo */}
-          <Link to="/" className="uppercase text-white font-bold font-serif md:text-2xl">
-            cmshairs👱‍♀️
-          </Link>
+      <nav
+        className={`sticky top-0 z-50 transition-shadow duration-300 
+        ${scrolled ? "shadow-lg bg-green-900" : "bg-green-900"}`}
+      >
+        <div className="px-6 py-4">
+          <div className="flex items-center justify-between max-w-7xl mx-auto">
+            {/* Logo */}
+            <Link
+              to="/"
+              className="uppercase text-white font-bold font-serif md:text-2xl"
+            >
+              cmshairs👱‍♀️
+            </Link>
 
-          {/* Desktop links */}
-          <ul className="hidden md:flex gap-6 items-center md:font-semibold">
-            {links.map((link) =>
-              link.label === "Cart" ? (
-                <li key={link.to}>
-                  <Link to={link.to}>
-                    <CartIcon totalQuantity={totalQuantity} />
-                  </Link>
-                </li>
-              ) : (
+            {/* Desktop links */}
+            <ul className="hidden md:flex gap-6 text-white md:font-semibold">
+              {links
+                .filter((link) => link.label !== "Cart")
+                .map((link) => (
+                  <li key={link.to}>
+                    <Link
+                      to={link.to}
+                      className="hover:text-yellow-400 transition"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+            </ul>
+
+            {/* Right section */}
+            <div className="flex items-center gap-4 text-white">
+              {/* Cart always visible */}
+              <Link to="/cart">
+                <CartIcon totalQuantity={totalQuantity} />
+              </Link>
+
+              {/* Hamburger */}
+              <button
+                className="md:hidden cursor-pointer"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  {isOpen ? (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  ) : (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  )}
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-out 
+  ${
+    isOpen
+      ? "max-h-96 opacity-100 translate-y-0"
+      : "max-h-0 opacity-0 -translate-y-2"
+  }
+  bg-green-800`}
+        >
+          <ul className="space-y-4 px-6 pb-4 text-white">
+            {links
+              .filter((link) => link.label !== "Cart")
+              .map((link) => (
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="hover:text-yellow-400 transition"
+                    onClick={() => setIsOpen(false)}
+                    className="flex gap-3 py-2 px-4 rounded hover:bg-yellow-500 transition"
                   >
                     {link.label}
                   </Link>
                 </li>
-              )
-            )}
+              ))}
           </ul>
-
-          {/* Mobile menu button */}
-          <button className="cursor-pointer md:hidden" onClick={() => setIsOpen(!isOpen)}>
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
         </div>
-
-        {/* Mobile menu */}
-        {isOpen && (
-          <ul className="md:hidden mt-4 space-y-4 px-2">
-            {links.map((link) => (
-              <li key={link.to}>
-                <Link
-                  to={link.to}
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center gap-3 py-2 px-4 rounded hover:bg-yellow-500"
-                >
-                  {link.label === "Cart" ? (
-                    <>
-                      <CartIcon totalQuantity={totalQuantity} />
-                      <span>Cart</span>
-                    </>
-                  ) : (
-                    link.label
-                  )}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
       </nav>
     </>
   );
