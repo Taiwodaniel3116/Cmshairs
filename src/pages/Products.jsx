@@ -85,7 +85,8 @@ const Products = ({ addToCart, totalQuantity }) => {
             ))
           ) : (
             <p className="text-gray-500 col-span-full text-center">
-              No products found.
+              No products found
+              <span className="animate-pulse">🛒.</span>
             </p>
           )}
         </div>

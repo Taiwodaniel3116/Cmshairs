@@ -11,7 +11,7 @@ const Footer = () => {
           crafted for your confidence.
         </p>
 
-        <div className="md:flex justify-start gap-10 pt-10">
+        <div className="md:flex justify-start gap-10 pt-5">
           {/* NAVIGATION LINKS */}
         <div>
           <p className="text-white font-bold mt-4">Quick Links</p>

@@ -4,39 +4,35 @@ import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
 const Home = ({ totalQuantity, cartItems }) => {
- 
   const links = [
-    {label: "Products", to: "/products"},
-    {label: "Cart", to: "/cart"},
-    {label: "checkout", to: "/checkout"},
+    { label: "Products", to: "/products" },
+    { label: "Cart", to: "/cart" },
+    { label: "checkout", to: "/checkout" },
   ];
 
   return (
     <>
-      <NavBar
-      // cartCount={cartItems.length}
-       links={links}
-      totalQuantity={totalQuantity}
-      />
-      {/* <nav className="flex justify-between px-2 border-b-2 border-b-gray-300 py-4 fixed top-0 w-full bg-green-900 z-10">
-        <Link to="/" className="uppercase text-white font-bold">
-          CMSHAIRS👱‍♀️
-        </Link>
-
-        <div className="flex gap-2 text-white font-semibold">
-          <Link to="/products">Products</Link>
-          <Link to="/cart">Cart</Link>
-          <Link to="/checkout">Checkout</Link>
-        </div>
-        <Link to="/cart" className="font-bold relative mt-1">
-          🛒
-          <span className="absolute bottom-4 right-2 text-[12px] text-white ">
-            {totalQuantity}
-          </span>
-        </Link>
-      </nav> */}
+      <NavBar links={links} totalQuantity={totalQuantity} />
 
       <div className="animate-fadeIn">
+
+        {/* Hero section */}
+        
+        <div className="pl-3 pt-11 h-dvh">
+          <span className="bg-green-900 text-white px-7 py-3 rounded-full text-xs font-semibold">New Collection 2026</span>
+
+          <h1 className="font-bold text-4xl pt-7 pb-4 ">
+            Premium Quality Hair Extensions
+          </h1>
+          <p className="w-[40ch]">
+            Transform your look with our luxurious collection of 100% human hair
+            wigs and extensions. Ethically sourced, expertly crafted.
+          </p>
+         <div className="mt-7 mb-2 w-fit h-max bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-3 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700">
+                 <Link to="/products">Shop Now →</Link>
+               </div>
+        </div>
+
         <div className="mb-0 pb-0">
           <Footer />
         </div>
