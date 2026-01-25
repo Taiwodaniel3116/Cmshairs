@@ -19,12 +19,12 @@ const Home = ({ totalQuantity, cartItems }) => {
       <div className="animate-fadeIn">
         {/* Hero section */}
 
-        <div className="pl-3 pt-17 bg-green-900 h-dvh">
-          <span className="bg-white text-green-900 px-7 py-3 rounded-full text-xs font-semibold">
+        <div className="pl-3 pt-17 h-max bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('/images/cms-hero.jpg')"}}>
+          <span className="bg-green-900 text-white px-7 py-3 rounded-full text-xs font-semibold">
             New Collection 2026
           </span>
 
-          <h1 className="font-bold text-6xl/17 pt-10 pb-6 text-white ">
+          <h1 className="font-bold text-7xl/17 pt-10 pb-6 text-white ">
             Premium Quality Hair Extensions
           </h1>
           <p className="text-white text-[19px]">
