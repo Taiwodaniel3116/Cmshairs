@@ -19,15 +19,15 @@ const Home = ({ totalQuantity, cartItems }) => {
       <div className="animate-fadeIn">
         {/* Hero section */}
 
-        <div className="pl-3 pt-20 h-max bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('/images/cms-hero.jpg')"}}>
-          <span className="bg-green-900 text-white px-7 py-3 rounded-full text-xs font-semibold">
+        <div className="pl-3 pt-20 pb-7 h-max bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('/images/cms-hero.jpg')"}}>
+          <span className="bg-green-900 text-white px-6 py-4 rounded-full text-xs font-semibold">
             New Collection 2026
           </span>
 
-          <h1 className="font-bold text-7xl/18 pt-10 pb-6 text-white ">
+          <h1 className="font-bold text-7xl/18 pt-10 pb-6 text-gray-100 ">
             Premium Quality Hair Extensions
           </h1>
-          <p className="text-white text-[19px]">
+          <p className="text-gray-100 text-[19px]">
             Transform your look with our luxurious collection of 100% human hair
             wigs and extensions. Ethically sourced, expertly crafted.
           </p>
@@ -37,7 +37,7 @@ const Home = ({ totalQuantity, cartItems }) => {
         </div>
 
         {/* Best selling styles */}
-        <div className="pt-10">
+        <div className="pt-15 bg-green-50 pb-7">
           <h2 className="font-bold text-4xl text-center underline">
             BestSelling Styles
           </h2>
@@ -45,7 +45,7 @@ const Home = ({ totalQuantity, cartItems }) => {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8  mt-10">
             {advert.map((item) => (
               <div key={item.id}>
-                <div className="pb-5 border-gray-200 border-2 shadow-2xl shadow-gray-300 h-full rounded-3xl">
+                <div className="pb-5 border-gray-200 border-2 shadow-2xl shadow-gray-300 h-full rounded-3xl bg-white">
                   <div className=" rounded-3xl mx-2">
                     <img
                       className="w-38 h-40 m-auto hover:shadow-white shadow-2xl active:shadow-white"
@@ -53,7 +53,7 @@ const Home = ({ totalQuantity, cartItems }) => {
                     />
                   </div>
                   <p className="ml-3 pt-3 font-bold">{item.name}</p>
-                  <p className="ml-3 pt-2 text-[17px] font-bold text-green-800">
+                  <p className="ml-3 pt-2 text-[18px] font-bold text-green-900">
                     ${item.price}
                   </p>
                 </div>
@@ -76,6 +76,11 @@ const Home = ({ totalQuantity, cartItems }) => {
              <div className="mt-7 mb-2 w-fit h-max m-auto bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-3 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700">
                   <Link to="/products">Shop Now</Link>
                 </div>
+        </div>
+
+        {/* About */}
+        <div className="pt-10">
+
         </div>
 
         <div className="mb-0 pb-0">

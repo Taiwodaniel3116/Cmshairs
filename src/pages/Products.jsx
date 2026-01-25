@@ -57,7 +57,7 @@ const Products = ({ addToCart, totalQuantity }) => {
                     />
                   </div>
                   <p className="ml-3 pt-3 font-bold">{product.name}</p>
-                  <p className="ml-3 pt-2 text-[17px] font-bold text-green-800">
+                  <p className="ml-3 pt-2 text-[17px] font-bold text-green-900">
                     ${product.price}
                   </p>
                   <div>{product.button}</div>
