@@ -24,7 +24,7 @@ const Home = ({ totalQuantity, cartItems }) => {
             New Collection 2026
           </span>
 
-          <h1 className="font-bold text-6xl/18 pt-10 pb-6 text-white ">
+          <h1 className="font-bold text-7xl/18 pt-10 pb-6 text-white ">
             Premium Quality Hair Extensions
           </h1>
           <p className="text-white text-[19px]">
