@@ -9,20 +9,20 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
   const phoneNumber = "2349027396272";
 
   const handleWhatsappOrder = () => {
-    let message = "ORDER SUMMARY \n";
+    let message = "*ORDER SUMMARY* \n \n";
     let total = 0;
 
     cartItems.map((cartItem) => {
-      message += `${cartItem.name}. ${cartItem.selectedInch}inches (${cartItem.quantity}) - #${
+      message += `- ${cartItem.name}. ${cartItem.selectedInch}inches (${cartItem.quantity}) - #${
         // cartItem.quantity * cartItem.price
         (
           cartItem.inchesPricing[cartItem.selectedInch] * cartItem.quantity
         ).toLocaleString()
-      } \n`;
+      } \n \n`;
       total = `${totalPrice.toLocaleString()}`;
     });
 
-    message += `\n TOTAL: #${total}`;
+    message += `\n *TOTAL: #${total}*`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;

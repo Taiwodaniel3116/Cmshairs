@@ -58,7 +58,7 @@ const Products = ({ addToCart, totalQuantity }) => {
                   </div>
                   <p className="ml-3 pt-3 font-semibold">{product.name}</p>
                   <div className="ml-3">
-                    <span>{product.wigDetail}</span>
+                    <span className="text-sm text-gray-600">{product.wigDetail}</span>
                   </div>
                   {/* <p className="ml-3 pt-2 text-[17px] font-bold text-green-900">
                     #{product.price}
