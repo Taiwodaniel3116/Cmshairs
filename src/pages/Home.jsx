@@ -19,7 +19,7 @@ const Home = ({ totalQuantity, cartItems }) => {
       <div className="animate-fadeIn">
         {/* Hero section */}
 
-        <div className="pl-3 pt-17 bg-green-900">
+        <div className="pl-3 pt-17 bg-green-900 h-dvh">
           <span className="bg-white text-green-900 px-7 py-3 rounded-full text-xs font-semibold">
             New Collection 2026
           </span>
