@@ -21,7 +21,7 @@ const HairAdvert = () => {
                 </div>
                 <p className="ml-3 pt-3 font-bold">{item.name}</p>
                 <p className="ml-3 pt-2 text-[18px] font-bold text-green-900">
-                  ${item.price}
+                  #{item.price}
                 </p>
               </div>
             </div>

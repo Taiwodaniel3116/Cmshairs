@@ -57,11 +57,13 @@ const Products = ({ addToCart, totalQuantity }) => {
                     />
                   </div>
                   <p className="ml-3 pt-3 font-semibold">{product.name}</p>
-                  <p className="ml-3">{product.length} inches</p>
-                  <p className="ml-3 pt-2 text-[17px] font-bold text-green-900">
+                  <div className="ml-3">
+                    <span>{product.wigDetail}</span>
+                  </div>
+                  {/* <p className="ml-3 pt-2 text-[17px] font-bold text-green-900">
                     #{product.price}
-                  </p>
-                  <div>{product.button}</div>
+                  </p> */}
+                  {/* <div>{product.button}</div> */}
 
                   {/* Colour */}
                   {/* <div className="ml-3">

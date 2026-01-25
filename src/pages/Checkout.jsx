@@ -13,13 +13,16 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
     let total = 0;
 
     cartItems.map((cartItem) => {
-      message += `${cartItem.name} (${cartItem.quantity}) - $${
-        cartItem.quantity * cartItem.price
+      message += `${cartItem.name}. ${cartItem.selectedInch}inches (${cartItem.quantity}) - #${
+        // cartItem.quantity * cartItem.price
+        (
+          cartItem.inchesPricing[cartItem.selectedInch] * cartItem.quantity
+        ).toLocaleString()
       } \n`;
-      total = `${totalPrice}.00`;
+      total = `${totalPrice.toLocaleString()}`;
     });
 
-    message += `\n TOTAL: $${total}`;
+    message += `\n TOTAL: #${total}`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -63,8 +66,15 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
                   <p className="text-center font-semibold text-[13px]">
                     {cartItem.name} ({cartItem.quantity})
                   </p>
+                  <p className="text-center text-sm text-gray-600">
+                    {cartItem.selectedInch}inches
+                  </p>
                   <p className="text-center text-green-900 font-bold">
-                    ${cartItem.price * cartItem.quantity}
+                    #
+                    {(
+                      cartItem.inchesPricing[cartItem.selectedInch] *
+                      cartItem.quantity
+                    ).toLocaleString()}
                   </p>
                 </div>
               ))}
@@ -75,21 +85,21 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
               <div className="flex justify-between">
                 <span className="text-black font-bold ">Discount:</span>
                 <span className="text-green-900 font-bold line-through">
-                  $0.00
+                  #0.00
                 </span>
               </div>
 
               <div className="flex justify-between">
                 <span className="text-black font-bold ">Shipping:</span>
                 <span className="text-green-900 font-bold line-through">
-                  $0.00
+                  #0.00
                 </span>
               </div>
 
               <div className="flex justify-between">
                 <span className="text-black font-bold">Tax:</span>
                 <span className="text-green-900 font-bold uppercase line-through">
-                  $0.00
+                  #0.00
                 </span>
               </div>
 
@@ -98,7 +108,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
                   ORDER Total:
                 </span>
                 <span className="text-green-900 font-bold border-b">
-                  ${totalPrice.toFixed(2)}
+                  #{totalPrice.toLocaleString()}
                 </span>
               </div>
             </div>

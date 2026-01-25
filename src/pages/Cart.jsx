@@ -20,6 +20,14 @@ const Cart = ({
     { label: "checkout", to: "/checkout" },
   ];
 
+  const updateInch = (id, newInch) => {
+    setCartItems((prev) =>
+      prev.map((item) =>
+        item.id === id ? { ...item, selectedInch: newInch } : item,
+      ),
+    );
+  };
+
   return (
     <div className="">
       <NavBar links={links} totalQuantity={totalQuantity} />
@@ -63,23 +71,73 @@ const Cart = ({
                   </div>
                   <div className="pt-3">
                     <p className="pt-3 font-semibold">{cartItem.name}</p>
+                    {/*  */}
+                    <div className="mt-2">
+                      <label className="text-sm text-gray-600">
+                        Length (inches)
+                      </label>
+
+                      {/* <select
+                        value={cartItem.selectedInch}
+                        onChange={(e) =>
+                          updateInch(cartItem.id, Number(e.target.value))
+                        }
+                        className="mt-1 w-fit rounded-md border border-gray-300 px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-black"
+                      >
+                        {Object.keys(cartItem.inchesPricing).map((inch) => (
+                          <option key={inch} value={inch}>
+                            {inch} inches
+                          </option>
+                        ))}
+                      </select> */}
+                      <div className="flex gap-2 mt-2">
+                        {Object.keys(cartItem.inchesPricing).map((inch) => (
+                          <button
+                            key={inch}
+                            onClick={() =>
+                              updateInch(cartItem.id, Number(inch))
+                            }
+                            className={`px-3 py-1 text-sm rounded-full border transition
+        ${
+          cartItem.selectedInch === Number(inch)
+            ? "bg-black text-white"
+            : "border-gray-300 text-gray-700"
+        }`}
+                          >
+                            {inch}"
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Price */}
+                    <p className="mt-2 text-sm text-gray-600">
+                      ₦
+                      {cartItem.inchesPricing[
+                        cartItem.selectedInch
+                      ].toLocaleString()}
+                      each
+                    </p>
+                    {/*  */}
                     {/* <p className="">
                       Quantity: {cartItem.quantity}
                     </p> */}
                     <p className="font-bold text-green-800">
-                      ${cartItem.price * cartItem.quantity}
+                      #
+                      {(cartItem.inchesPricing[cartItem.selectedInch] *
+                        cartItem.quantity).toLocaleString()}
                     </p>
 
                     <div className="mt-2">
                       <button
-                        className="text-3xl w-10 mr-2 rounded-full border border-gray-400 cursor-pointer hover:bg-amber-400 active:bg-amber-400 duration-300"
+                        className="text-2xl w-9 mr-2 rounded-full border border-gray-400 cursor-pointer hover:bg-amber-400 active:bg-amber-400 duration-300"
                         onClick={() => decreaseQuantity(id)}
                       >
                         -
                       </button>
-                      <span className="font-semibold">{cartItem.quantity}</span>
+                      <span className="">{cartItem.quantity}</span>
                       <button
-                        className="text-3xl w-10 ml-2 rounded-full border border-gray-400 cursor-pointer hover:bg-amber-400 active:bg-amber-400 duration-300"
+                        className="text-2xl w-9 ml-2 rounded-full border border-gray-400 cursor-pointer hover:bg-amber-400 active:bg-amber-400 duration-300"
                         onClick={() => increaseQuanity(id)}
                       >
                         +
@@ -99,7 +157,7 @@ const Cart = ({
               <div className="flex justify-around">
                 <span className="text-black font-bold uppercase">Total:</span>
                 <span className=" text-green-900 font-extrabold">
-                  ${totalPrice.toFixed(2)}
+                  #{totalPrice.toLocaleString()}
                 </span>
               </div>
               <div className="flex justify-center"></div>

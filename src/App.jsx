@@ -92,12 +92,12 @@ function App() {
 
   // Total Price Calculation//
   const totalPrice = cartItems.reduce((total, cartItem) => {
-    return total + cartItem.price * cartItem.quantity;
+    return total + cartItem.inchesPricing[cartItem.selectedInch] * cartItem.quantity;
   }, 0); //Array initial value
 
   // Clear All Cart Items //
   function clearCartItems() {
-    const clearTtems = setCartItems([]);
+     setCartItems([]);
     console.log("Cart Items cleared");
   }
 
