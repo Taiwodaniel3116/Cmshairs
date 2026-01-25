@@ -52,24 +52,25 @@ const Products = ({ addToCart, totalQuantity }) => {
                 <div className="pb-5 border-gray-200 border-2 shadow-2xl shadow-gray-300 h-full rounded-3xl">
                   <div className=" rounded-3xl mx-2">
                     <img
-                      className="w-38 h-40 m-auto hover:shadow-white shadow-2xl active:shadow-white"
+                      className="w-38 h-40 m-auto mt-1 rounded-2xl hover:shadow-white shadow-2xl active:shadow-white"
                       src={product.image}
                     />
                   </div>
-                  <p className="ml-3 pt-3 font-bold">{product.name}</p>
+                  <p className="ml-3 pt-3 font-semibold">{product.name}</p>
+                  <p className="ml-3">{product.length} inches</p>
                   <p className="ml-3 pt-2 text-[17px] font-bold text-green-900">
-                    ${product.price}
+                    #{product.price}
                   </p>
                   <div>{product.button}</div>
 
                   {/* Colour */}
-                  <div className="ml-3">
+                  {/* <div className="ml-3">
                     <input className="mr-2" type="radio" name="" id="" />
 
                     <input className="mr-2" type="radio" name="" id="" />
 
                     <input type="radio" name="" id="" />
-                  </div>
+                  </div> */}
 
                   {/* Add to cart button */}
                   <div className="flex justify-center mt-2">

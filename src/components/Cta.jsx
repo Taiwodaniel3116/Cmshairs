@@ -21,7 +21,7 @@ const Cta = () => {
         <p className="text-gray-600 mb-3">Want to make an Inquiry 📲 ?</p>
 
         <a
-          href="https://wa.me/2348144969574?text=Hello%20I%20would%20like%20to%20make%20an%20inquiry"
+          href="https://wa.me/2348144969574?text=Hello%20CMSHAIRS%20I%20would%20like%20to%20make%20an%20Inquiry"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 rounded-full bg-green-900 px-6 py-3 text-white font-medium hover:bg-green-700 transition"

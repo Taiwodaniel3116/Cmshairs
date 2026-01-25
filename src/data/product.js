@@ -1,17 +1,50 @@
 export const products = [
   {
    id: "1",
-  //  image: "/images/adults-plain-cotton-tshirt-2-pack-teal.jpg",
-   image: "/images/adults-plain-cotton-tshirt-2-pack-teal.jpg",
-   name: "Brazillian Straight Lace Front Wig",
-   price: 200,
+   image: "/images/jc-curly.jpg",
+   name: "4*4 jc",
+   length: 14,
+   price: 55000,
    quantity: 1,
   },
   {
    id: "2",
-   image: "/images/backpack.jpg",
-   name: "Deep Curly Bundle",
-   price: 65,
+   image: "/images/flip-bounce-sdd.jpg",
+   name: "5*5 Flip Bounce sdd",
+   length: 14,
+   price: 116000,
+   quantity: 1
+  },
+  {
+   id: "3",
+   image: "/images/deep-hh.jpg",
+   name: "4*4 deep 💯hh",
+   length: 24,
+   price: 88000,
+   quantity: 1,
+  },
+  {
+   id: "4",
+   image: "/images/flip-bounce-sdd.jpg",
+   name: "4*4 JC 💯hh",
+   length: 14,
+   price: 116000,
+   quantity: 1
+  },
+  {
+   id: "5",
+   image: "/images/full-frontal-bodywave.jpg",
+   name: "Full frontal bodywave 💯hh",
+   length: 20,
+   price: 78000,
+   quantity: 1
+  },
+  {
+   id: "6",
+   image: "/images/sdd-pixie.jpg",
+   name: "Sdd pixie 5*5 99j 💯hh",
+   length: 20,
+   price: 78000,
    quantity: 1
   },
 ]

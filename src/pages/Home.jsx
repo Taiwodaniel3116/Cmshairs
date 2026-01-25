@@ -4,7 +4,6 @@ import Hero from "../components/Hero";
 import HairAdvert from "../components/HairAdvert";
 import Faq from "../components/Faq";
 import Cta from "../components/Cta";
-import Contact from "../components/Contact";
 
 const Home = ({ totalQuantity, cartItems }) => {
   const links = [

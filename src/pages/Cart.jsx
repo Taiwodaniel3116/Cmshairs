@@ -62,23 +62,24 @@ const Cart = ({
                     />
                   </div>
                   <div className="pt-3">
-                    <p className="pt-3 font-bold">{cartItem.name}</p>
-                    <p className="font-semibold">
+                    <p className="pt-3 font-semibold">{cartItem.name}</p>
+                    {/* <p className="">
                       Quantity: {cartItem.quantity}
-                    </p>
+                    </p> */}
                     <p className="font-bold text-green-800">
                       ${cartItem.price * cartItem.quantity}
                     </p>
 
                     <div className="mt-2">
                       <button
-                        className="text-3xl w-10 mr-3 rounded-full border border-gray-400 cursor-pointer hover:bg-amber-400 active:bg-amber-400 duration-300"
+                        className="text-3xl w-10 mr-2 rounded-full border border-gray-400 cursor-pointer hover:bg-amber-400 active:bg-amber-400 duration-300"
                         onClick={() => decreaseQuantity(id)}
                       >
                         -
                       </button>
+                      <span className="font-semibold">{cartItem.quantity}</span>
                       <button
-                        className="text-3xl w-10 mr-3 rounded-full border border-gray-400 cursor-pointer hover:bg-amber-400 active:bg-amber-400 duration-300"
+                        className="text-3xl w-10 ml-2 rounded-full border border-gray-400 cursor-pointer hover:bg-amber-400 active:bg-amber-400 duration-300"
                         onClick={() => increaseQuanity(id)}
                       >
                         +

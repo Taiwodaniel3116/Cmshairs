@@ -15,7 +15,7 @@ const HairAdvert = () => {
               <div className="pb-5 border-gray-200 border-2 shadow-2xl shadow-gray-300 h-full rounded-3xl bg-white">
                 <div className=" rounded-3xl mx-2">
                   <img
-                    className="w-38 h-40 m-auto hover:shadow-white shadow-2xl active:shadow-white"
+                    className="w-38 h-40 m-auto mt-1 rounded-2xl hover:shadow-white shadow-2xl active:shadow-white"
                     src={item.image}
                   />
                 </div>
