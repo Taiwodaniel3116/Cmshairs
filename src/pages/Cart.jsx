@@ -44,7 +44,7 @@ const Cart = ({
               Review your items and proceed to checkout
             </p>
 
-            <div className="bg-gray-200 py-4 rounded-full w-90 flex items-center justify-between m-auto mb-5">
+            <div className="bg-gray-100 py-4 rounded-full w-90 flex items-center justify-between m-auto mb-5">
               <p className="text-[18px] font-semibold pl-5">
                 Cart items ({totalQuantity})
               </p>
@@ -163,7 +163,7 @@ const Cart = ({
               <div className="flex justify-center"></div>
             </div>
 
-            <div className="mt-7 mb-2 w-fit h-max m-auto font-semibold bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-3 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700">
+            <div className="mt-7 mb-2 w-fit h-max m-auto font-semibold bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-4 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700">
               <Link to="/checkout">Proceed to Checkout</Link>
             </div>
           </>

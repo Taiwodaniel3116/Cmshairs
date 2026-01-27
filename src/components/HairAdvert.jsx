@@ -4,18 +4,19 @@ import { advert } from "../data/advert";
 const HairAdvert = () => {
   return (
     <>
-      <div className="pt-15 bg-green-50 pb-7">
-        <h2 className="font-bold text-4xl text-center underline">
+      <div className="pt-23 bg-green-50 pb-7">
+        <h2 className="font-bold text-4xl text-center underline xl:text-5xl">
           BestSelling Styles
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8  mt-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3  mt-10">
           {advert.map((item) => (
             <div key={item.id}>
-              <div className="pb-5 border-gray-200 border-2 shadow-2xl shadow-gray-300 h-full rounded-3xl bg-white">
+              <div className="pb-5 border-gray-200 border-2 shadow-2xl shadow-gray-300 h-full rounded-3xl bg-white  md:mx-3 xl:mx-5">
+
                 <div className=" rounded-3xl mx-2">
                   <img
-                    className="w-38 h-40 m-auto mt-1 rounded-2xl hover:shadow-white shadow-2xl active:shadow-white"
+                    className="w-38 h-40 m-auto mt-1 rounded-2xl hover:shadow-white shadow-2xl active:shadow-white md:w-fit md:h-fit"
                     src={item.image}
                   />
                 </div>
@@ -28,7 +29,7 @@ const HairAdvert = () => {
           ))}
         </div>
         {/* View all products button */}
-        <div className="mt-7 mb-2 w-fit h-max m-auto bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-3 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700">
+        <div className="mt-7 mb-2 w-fit h-max m-auto bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-4 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700 xl:px-20">
           <Link to="/products">View All Products</Link>
         </div>
       </div>

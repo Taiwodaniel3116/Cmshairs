@@ -22,7 +22,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
       total = `${totalPrice.toLocaleString()}`;
     });
 
-    message += `\n *TOTAL: #${total}*`;
+    message += ` \n *TOTAL: #${total}*`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -84,24 +84,24 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
             <div className="flex flex-col gap-5 bg-white w-75 m-auto px-3 py-2 rounded-2xl border-2 border-gray-200">
               <div className="flex justify-between">
                 <span className="text-black font-bold ">Discount:</span>
-                <span className="text-green-900 font-bold line-through">
-                  #0.00
+                <span className="text-green-900 font-bold">
+                  ___
                 </span>
               </div>
 
               <div className="flex justify-between">
-                <span className="text-black font-bold ">Shipping:</span>
-                <span className="text-green-900 font-bold line-through">
-                  #0.00
+                <span className="text-black font-bold ">Delivery Fee:</span>
+                <span className="text-green-900 font-bold">
+                  ___
                 </span>
               </div>
 
-              <div className="flex justify-between">
+              {/* <div className="flex justify-between">
                 <span className="text-black font-bold">Tax:</span>
-                <span className="text-green-900 font-bold uppercase line-through">
-                  #0.00
+                <span className="text-green-900 font-bold uppercase">
+                  ___
                 </span>
-              </div>
+              </div> */}
 
               <div className="flex justify-between">
                 <span className="text-black font-bold uppercase">
@@ -112,12 +112,16 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
                 </span>
               </div>
             </div>
+             <div className="bg-green-200 mt-2 w-75 m-auto pl-2 rounded-2xl py-1">
+              <p>Note: Discount and Delivery fee will be discussed on chat 💬 </p>
+              </div>
+
             {/*  */}
 
-            <div className="flex justify-center flex-col items-center gap-2 pt-3 mb-15 mt-5 font-mono">
+            <div className="flex justify-center flex-col items-center gap-2 pt-3 mb-15 mt-5">
               {/* <a href={"https://wa.me/2349027396272"}> */}
               <button
-                className="bg-green-900 text-white font-semibold px-10 py-3 rounded-3xl duration-300 hover:bg-green-700 active:bg-green-700 cursor-pointer"
+                className="bg-green-900 text-white font-semibold px-10 py-4 rounded-full duration-300 shadow-2xs shadow-green-200 hover:bg-green-700 active:bg-green-700 cursor-pointer"
                 onClick={handleWhatsappOrder}
               >
                 Complete Order via Whatsapp{" "}

@@ -28,8 +28,8 @@ export default function Faq() {
 
   return (
     <div className="w-full max-w-3xl mx-auto px-4 py-16">
-      <h2 className="text-3xl font-bold text-center mb-10">
-        Frequently Asked Questions
+      <h2 className="text-4xl font-bold text-center mb-10 m-auto md:w-[20ch] xl:text-5xl">
+        Hair Questions? Answered
       </h2>
 
       <div className="space-y-4">
@@ -52,7 +52,7 @@ export default function Faq() {
               </button>
 
               <div
-                className={`grid transition-all duration-300 ease-in-out ${
+                className={`grid transition-all duration-300 ease-in-out bg-green-50 ${
                   isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                 }`}
               >

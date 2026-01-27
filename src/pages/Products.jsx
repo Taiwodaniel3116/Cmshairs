@@ -45,7 +45,7 @@ const Products = ({ addToCart, totalQuantity }) => {
         </div>
 
         {/* Products List*/}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8  mt-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6  mt-10">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product) => (
               <div key={product.id}>

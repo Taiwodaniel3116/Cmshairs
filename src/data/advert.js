@@ -26,5 +26,19 @@ export const advert = [
    name: "Peruvian-body-wave",
    price: 65,
    quantity: 1
+  },
+  {
+    id: "5",
+    image: "/images/body-wave-closure.jpg",
+    name: "Body Wave Closure",
+    price: 200,
+    quantity: 1,
+  },
+   {
+   id: "6",
+   image: "/images/peruvian-body-wave.jpg",
+   name: "Peruvian-body-wave",
+   price: 65,
+   quantity: 1
   }
 ];
