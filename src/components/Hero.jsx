@@ -11,7 +11,7 @@ const Hero = () => {
         className={`pl-3 pt-20 pb-9 h-max bg-cover bg- bg-center bg-no-repeat md:pl-10 md:pb-20 xl:pb-30 
           transition-all duration-700 ease-out 
     ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-        style={{ backgroundImage: "url('/images/cms-hero.jpg')" }}
+        style={{ backgroundImage:"linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),  url('/images/cms-hero.jpg')" }}
       >
         <span className="bg-green-900 text-white py-4 px-6 rounded-full text-xs font-semibold xl:px-9 ">
           New Collection 2026
@@ -26,11 +26,11 @@ const Hero = () => {
         </p>
 
         <div className="flex gap-4">
-          <div className="mt-7 mb-2 w-fit h-max bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-4 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700 cursor-pointer">
+          <div className="mt-7 mb-2 w-fit h-max bg-green-900 shadow-2xs shadow-yellow-200 text-white px-10 py-4 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700 cursor-pointer">
             <Link to="/products">Shop Now →</Link>
           </div>
           
-          <button className="mt-7 mb-2 w-fit h-max bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-4 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700 cursor-pointer">Send a DM 📞</button>
+          <button className="mt-7 mb-2 w-fit h-max bg-green-900 shadow-2xs shadow-yellow-200 text-white px-10 py-4 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700 cursor-pointer">Send a DM 💬</button>
         </div>
       </div>
     </>

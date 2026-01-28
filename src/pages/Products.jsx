@@ -78,7 +78,7 @@ const Products = ({ addToCart, totalQuantity }) => {
               placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className=" text-sm px-10 py-2 rounded-full border border-gray-200 outline outline-gray-100  md:px-20"
+              className=" text-sm px-10 py-2 rounded-full outline outline-gray-100  md:px-20"
             />
             {/* Search Icon */}
             {/* <button

@@ -16,7 +16,7 @@ const CartIcon = ({ totalQuantity }) => {
     <div className="relative">
       {/* Cart Icon */}
       <svg
-        className="w-6 h-6 text-gray-700"
+        className="w-6 h-6 text-white"
         fill="none"
         stroke="currentColor"
         strokeWidth={2}
@@ -32,7 +32,7 @@ const CartIcon = ({ totalQuantity }) => {
       {/* Badge */}
       <span
         className={`absolute -top-2 -right-2 
-          bg-green-900 text-[11px] font-semibold text-white
+          bg-yellow-500 text-[11px] font-semibold text-green-900
           rounded-full w-4 h-4
           flex items-center justify-center
           transition-transform duration-300

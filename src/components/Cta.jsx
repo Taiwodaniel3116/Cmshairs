@@ -7,7 +7,7 @@ const Cta = () => {
   return (
     <div
      ref={ref} 
-    className={`pt-10
+    className={`pt-10 pb-10
     transition-all duration-700 ease-out 
     ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
       <h2 className="font-bold text-4xl text-center m-auto md:w-[20ch] xl:text-5xl">

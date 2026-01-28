@@ -18,28 +18,29 @@ const NavBar = ({ totalQuantity, links }) => {
   return (
     <>
       <nav
-        className={`border-b-2 border-gray-100 uppercase sticky top-0 z-50 transition-shadow duration-300
-        ${scrolled ? "shadow-lg bg-white" : "bg-white"}`}
+        className={`border-b-2 border-yellow-500 uppercase sticky top-0 z-50 transition-shadow duration-300
+        ${scrolled ? "shadow-lg bg-green-900" : "bg-green-900"}`}
       >
         <div className="px-6 py-6">
           <div className="flex items-center justify-between max-w-7xl mx-auto">
             {/* Logo */}
             <Link
               to="/"
-              className="uppercase text-black font-bold font-serif md:text-2xl"
+              className="uppercase text-white font-bold font-serif md:text-2xl"
             >
-              cmshairs👱‍♀️
+              cmshairs
+              {/* 👱‍♀️ */}
             </Link>
 
             {/* Desktop links */}
-            <ul className="hidden md:flex gap-6 text-gray-800 md:font-semibold">
+            <ul className="hidden md:flex gap-6 text-yellow-500 md:font-semibold">
               {links
                 .filter((link) => link.label !== "Cart")
                 .map((link) => (
                   <li key={link.to}>
                     <Link
                       to={link.to}
-                      className="hover:text-green-500 transition"
+                      className="hover:text-white transition"
                     >
                       {link.label}
                     </Link>
@@ -56,7 +57,7 @@ const NavBar = ({ totalQuantity, links }) => {
 
               {/* Hamburger */}
               <button
-                className="md:hidden cursor-pointer text-gray-800"
+                className="md:hidden cursor-pointer text-white"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 <svg
@@ -88,7 +89,7 @@ const NavBar = ({ totalQuantity, links }) => {
 
         {/* Mobile menu */}
         {isOpen && (
-          <ul className="md:hidden bg-white text-black space-y-4 px-6 pb-4">
+          <ul className="md:hidden bg-green-900 text-yellow-500 space-y-4 px-6 pb-4">
             {links
               .filter((link) => link.label !== "Cart")
               .map((link) => (
@@ -96,7 +97,7 @@ const NavBar = ({ totalQuantity, links }) => {
                   <Link
                     to={link.to}
                     onClick={() => setIsOpen(false)}
-                    className="flex gap-3 py-2 px-4 duration-300 transition  hover:bg-green-900 hover:text-white transtion rounded active:bg-green-900 active:text-white "
+                    className="flex gap-3 py-2 px-4 duration-300 transition  hover:bg-white hover:text-green-900 transtion rounded active:bg-green-900 active:text-white "
                   >
                     {link.label}
                   </Link>
