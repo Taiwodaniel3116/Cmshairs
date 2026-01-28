@@ -56,12 +56,12 @@ const Products = ({ addToCart, totalQuantity }) => {
         </p>
 
         {/* Category UI */}
-        <div className="bg-gray-50 w-fit m-auto px-5 py-5 mt-10 rounded-2xl">
+        <div className="bg-gray-50 w-fit m-auto px-7 py-5 mt-10 rounded-2xl">
           <div className="flex justify-center">
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="border border-gray-200 rounded-full px-6 py-3 text-sm focus:outline-none"
+              className="border border-gray-300 rounded-full px-8 py-3 text-sm focus:outline-none"
             >
               {categories.map((category) => (
                 <option key={category} value={category}>
@@ -77,7 +77,7 @@ const Products = ({ addToCart, totalQuantity }) => {
               placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className=" text-sm px-10 py-2 rounded-full border border-gray-100  md:px-20"
+              className=" text-sm px-10 py-2 rounded-full border border-gray-300  md:px-20"
             />
             {/* Search Icon */}
             {/* <button
