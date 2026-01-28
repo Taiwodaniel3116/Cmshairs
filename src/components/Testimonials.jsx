@@ -28,7 +28,7 @@ export default function TestimonialsSection() {
 
   return (
     <section className="w-full py-20 bg-gray-50 overflow-hidden">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+      <h2 className="text-4xl xl:text-5xl font-bold text-center mb-12">
         What Our Clients Say
       </h2>
 
