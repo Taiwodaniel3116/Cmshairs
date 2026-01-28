@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
+import About from "../components/About";
 import HairAdvert from "../components/HairAdvert";
 import Faq from "../components/Faq";
 import Cta from "../components/Cta";
@@ -19,6 +20,9 @@ const Home = ({ totalQuantity, cartItems }) => {
       <div className="animate-fadeIn">
         {/* Hero Section */}
         <Hero />
+
+        {/* About */}
+        <About/>
 
         {/* Best Selling Styles */}
         <HairAdvert />

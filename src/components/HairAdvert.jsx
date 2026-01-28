@@ -20,7 +20,7 @@ const HairAdvert = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3  mt-10">
           {advert.map((item) => (
             <div key={item.id}>
-              <div className="pb-5 border-gray-200 border-2 shadow-2xl shadow-gray-300 h-full rounded-3xl md:mx-3 xl:h-auto">
+              <div className="bg-white pb-5 border-gray-200 border-2 shadow-2xl shadow-gray-300 h-full rounded-3xl md:mx-3 xl:h-auto">
                 <div className=" rounded-3xl mx-2">
                   <img
                     className="w-38 h-40 m-auto mt-1 rounded-2xl hover:shadow-white shadow-2xl active:shadow-white md:w-fit md:h-fit"
