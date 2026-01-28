@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import useScrollFadeIn from "../hooks/useScrollFadeIn";
 
 const Hero = () => {
-    const {ref, isVisible} = useScrollFadeIn();
-  
+  const { ref, isVisible } = useScrollFadeIn();
+
   return (
     <>
       <div
@@ -24,8 +24,13 @@ const Hero = () => {
           Transform your look with our luxurious collection of 100% human hair
           wigs and extensions. Ethically sourced, expertly crafted.
         </p>
-        <div className="mt-7 mb-2 w-fit h-max bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-4 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700">
-          <Link to="/products">Shop Now →</Link>
+
+        <div className="flex gap-4">
+          <div className="mt-7 mb-2 w-fit h-max bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-4 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700 cursor-pointer">
+            <Link to="/products">Shop Now →</Link>
+          </div>
+          
+          <button className="mt-7 mb-2 w-fit h-max bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-4 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700 cursor-pointer">Send a DM 📞</button>
         </div>
       </div>
     </>

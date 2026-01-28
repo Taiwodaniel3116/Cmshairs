@@ -113,7 +113,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
               </div>
             </div>
              <div className="bg-green-200 mt-2 w-75 m-auto pl-2 rounded-2xl py-1">
-              <p>Note: Discount and Delivery fee will be discussed on chat 💬 </p>
+              <p>Note: Discount and delivery details will be discussed via chat 💬 ↡</p>
               </div>
 
             {/*  */}

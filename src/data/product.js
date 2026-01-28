@@ -3,6 +3,8 @@ export const products = [
     id: "1",
     image: "/images/jc-curly.jpg",
     name: "4*4 jc",
+    category: "Curly 4*4",
+    rating: 5,
     inchesPricing: {
       12: 40000,
       14: 55000,
@@ -15,6 +17,8 @@ export const products = [
     id: "2",
     image: "/images/flip-bounce-sdd.jpg",
     name: "5*5 Flip Bounce sdd",
+    category: "Bounce sdd 5*5",
+    rating: 5,
     inchesPricing: {
       12: 100000,
       14: 116000,
@@ -27,6 +31,8 @@ export const products = [
     id: "3",
     image: "/images/deep-hh.jpg",
     name: "4*4 deep 💯hh very full",
+    category: "Deep hh 4*4",
+    rating: 5,
     inchesPricing: {
       24: 88000,
     },
@@ -38,6 +44,8 @@ export const products = [
     id: "4",
     image: "/images/jc-curl.jpg",
     name: "4*4 JC 💯hh",
+    category: "Curly",
+    rating: 5,
     inchesPricing: {
       18: 56000,
       20: 70000,
@@ -50,6 +58,8 @@ export const products = [
     id: "5",
     image: "/images/full-frontal-bodywave.jpg",
     name: "Full frontal bodywave 💯hh",
+    category: "Frontal",
+    rating: 5,
     inchesPricing: {
       20: 78000,
     },
@@ -61,6 +71,8 @@ export const products = [
     id: "6",
     image: "/images/sdd-pixie.jpg",
     name: "Sdd pixie 5*5 99j 💯hh",
+    category: "sdd pixie",
+    rating: 5,
     inchesPricing: {
       18: 125000,
       20: 135000,

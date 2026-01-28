@@ -5,6 +5,9 @@
     @apply text-blue-500 text-4xl text-center underline mb-15;
   }
 } */
+ body {
+  scroll-behavior: smooth;
+ }
 
 @keyframes fadeIn {
   from {

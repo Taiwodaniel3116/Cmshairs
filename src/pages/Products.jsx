@@ -3,14 +3,36 @@ import { products } from "../data/product";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
+import StarRating from "../components/StarRating";
 
 const Products = ({ addToCart, totalQuantity }) => {
   const [searchQuery, setSearchQuery] = useState(""); // stores what the user types.
+  // Category Filter Logic
+  const categories = [
+    "All Categories",
+    "Wigs",
+    "Bundles",
+    "Closures",
+    "sdd pixie",
+    "Curly",
+  ];
+  const [selectedCategory, setSelectedCategory] = useState("All Categories"); //
 
   //Filter products based on search
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // const filteredProducts = products.filter((product) =>
+  //   product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  // );
+  const filteredProducts = products.filter((product) => {
+    const matchesSearch = product.name
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
+
+    const matchesCategory =
+      selectedCategory === "All Categories" ||
+      product.category === selectedCategory;
+
+    return matchesSearch && matchesCategory;
+  });
 
   //Navbar
   const links = [
@@ -33,15 +55,54 @@ const Products = ({ addToCart, totalQuantity }) => {
           Discover our premium collection of hair extensions and wigs.
         </p>
 
-        <div className=" flex justify-center mt-3 relative z-0">
-          {/* <span className="absolute left-70 top-2 z-0">🔍</span> */}
-          <input
-            type="text"
-            placeholder="Search products..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="bg-gray-100 px-10 py-2 rounded-full outline-gray-100 caret-green-400 md:px-20"
-          />
+        {/* Category UI */}
+        <div className="bg-gray-50 w-fit m-auto px-5 py-5 mt-10 rounded-2xl">
+          <div className="flex justify-center">
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="border border-gray-200 rounded-full px-6 py-3 text-sm focus:outline-none"
+            >
+              {categories.map((category) => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className=" flex justify-center mt-3 relative w-full z-0">
+            {/* <span className="absolute left-70 top-2 z-0">🔍</span> */}
+            <input
+              type="text"
+              placeholder="Search products..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className=" text-sm px-10 py-2 rounded-full border border-gray-200 outline outline-gray-100  md:px-20"
+            />
+            {/* Search Icon */}
+            {/* <button
+            className="absolute right-20 top-1/2 -translate-y-1/2 text-green-700 cursor-pointer"
+            aria-label="Search"
+          >
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="h-5 w-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-4.35-4.35m1.85-5.4a7.25 7.25 0 11-14.5 0 7.25 7.25 0 0114.5 0z"
+                />
+              </svg>
+            </span>
+          </button> */}
+          </div>
         </div>
 
         {/* Products List*/}
@@ -57,8 +118,11 @@ const Products = ({ addToCart, totalQuantity }) => {
                     />
                   </div>
                   <p className="ml-3 pt-3 font-semibold">{product.name}</p>
+                  {/* <p className="text-sm text-gray-500">{product.category}</p> */}
                   <div className="ml-3">
-                    <span className="text-sm text-gray-600">{product.wigDetail}</span>
+                    <span className="text-sm text-gray-600">
+                      {product.wigDetail}
+                    </span>
                   </div>
                   {/* <p className="ml-3 pt-2 text-[17px] font-bold text-green-900">
                     #{product.price}
@@ -73,6 +137,11 @@ const Products = ({ addToCart, totalQuantity }) => {
 
                     <input type="radio" name="" id="" />
                   </div> */}
+
+                  {/* Rating Stars */}
+                  <div className="mt-2">
+                    <StarRating rating={product.rating} />
+                  </div>
 
                   {/* Add to cart button */}
                   <div className="flex justify-center mt-2">
