@@ -72,13 +72,12 @@ const Products = ({ addToCart, totalQuantity }) => {
           </div>
 
           <div className=" flex justify-center mt-3 relative w-full z-0">
-            {/* <span className="absolute left-70 top-2 z-0">🔍</span> */}
             <input
               type="text"
               placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className=" text-sm px-10 py-2 rounded-full outline outline-gray-100  md:px-20"
+              className=" text-sm px-10 py-2 rounded-full border border-gray-100  md:px-20"
             />
             {/* Search Icon */}
             {/* <button
