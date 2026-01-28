@@ -40,7 +40,7 @@ const Cart = ({
             <h1 className="font-bold text-4xl text-center pb-3 pt-5 mt-8 md:text-5xl">
               Shopping Cart
             </h1>
-            <p className="text-center pb-8 md:text-[20px]">
+            <p className="text-center pb-8 text-[18px] text-gray-800 md:text-[20px]">
               Review your items and proceed to checkout
             </p>
 

@@ -1,7 +1,9 @@
 import { useState } from "react";
+import useScrollFadeIn from "../hooks/useScrollFadeIn";
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState(null);
+  const {ref, isVisible} = useScrollFadeIn();
 
   const faqs = [
     {
@@ -27,7 +29,11 @@ export default function Faq() {
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto px-4 py-16">
+    <div 
+      ref={ref}
+     className={`w-full max-w-3xl mx-auto px-4 py-16 
+    transition-all duration-700 ease-out 
+    ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}> 
       <h2 className="text-4xl font-bold text-center mb-10 m-auto md:w-[20ch] xl:text-5xl">
         Hair Questions? Answered
       </h2>

@@ -29,7 +29,7 @@ const Products = ({ addToCart, totalQuantity }) => {
           {" "}
           Our Products
         </h1>
-        <p className="text-center mt-2 m-auto md:text-[20px]">
+        <p className="text-center mt-2 m-auto text-[18px] text-gray-800 md:text-[20px]">
           Discover our premium collection of hair extensions and wigs.
         </p>
 

@@ -18,7 +18,7 @@ const NavBar = ({ totalQuantity, links }) => {
   return (
     <>
       <nav
-        className={`border-b-2 border-gray-100 sticky top-0 z-50 transition-shadow duration-300
+        className={`border-b-2 border-gray-100 uppercase sticky top-0 z-50 transition-shadow duration-300
         ${scrolled ? "shadow-lg bg-white" : "bg-white"}`}
       >
         <div className="px-6 py-6">

@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import { advert } from "../data/advert";
+import useScrollFadeIn from "../hooks/useScrollFadeIn";
 
 const HairAdvert = () => {
+  const {ref, isVisible} = useScrollFadeIn();
+
   return (
     <>
-      <div className="pt-23 bg-green-50 pb-7">
+      <div
+       ref={ref}      
+      className={`pt-23 bg-green-50 pb-7
+        transition-all duration-700 ease-out 
+    ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
         <h2 className="font-bold text-4xl text-center underline xl:text-5xl">
           BestSelling Styles
         </h2>

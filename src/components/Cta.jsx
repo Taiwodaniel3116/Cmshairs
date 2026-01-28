@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
+import useScrollFadeIn from "../hooks/useScrollFadeIn";
 
 const Cta = () => {
+    const {ref, isVisible} = useScrollFadeIn();
+  
   return (
-    <div className="pt-10">
+    <div
+     ref={ref} 
+    className={`pt-10
+    transition-all duration-700 ease-out 
+    ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
       <h2 className="font-bold text-4xl text-center m-auto md:w-[20ch] xl:text-5xl">
         Transform your Look Today
       </h2>

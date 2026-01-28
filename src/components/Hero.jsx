@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
+import useScrollFadeIn from "../hooks/useScrollFadeIn";
 
 const Hero = () => {
+    const {ref, isVisible} = useScrollFadeIn();
+  
   return (
     <>
       <div
-        className="pl-3 pt-20 pb-9 h-max bg-cover bg- bg-center bg-no-repeat md:pl-10 md:pb-20 xl:pb-30"
+        ref={ref}
+        className={`pl-3 pt-20 pb-9 h-max bg-cover bg- bg-center bg-no-repeat md:pl-10 md:pb-20 xl:pb-30 
+          transition-all duration-700 ease-out 
+    ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         style={{ backgroundImage: "url('/images/cms-hero.jpg')" }}
       >
         <span className="bg-green-900 text-white py-4 px-6 rounded-full text-xs font-semibold xl:px-9 ">
