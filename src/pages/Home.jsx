@@ -18,7 +18,7 @@ const Home = ({ totalQuantity, cartItems }) => {
     <>
       <NavBar links={links} totalQuantity={totalQuantity} />
 
-      <div className="animate-fadeIn">
+      <div className="">
         {/* Hero Section */}
         <Hero />
 

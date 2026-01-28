@@ -10,20 +10,22 @@ export default function About() {
       ref={ref}
     className={`w-full py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 grid gap-12 md:grid-cols-2 items-center
-      ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+ `}>
         
         {/* Image Container */}
-        <div className="w-full h-100 rounded-2xl overflow-hidden bg-gray-100 shadow-sm">
+        <div className="w-full h-100 rounded-2xl overflow-hidden bg-gray-100 shadow-sm"
+        >
           <img
             src="/images/our-story.jpg"
             alt="Premium wig collection"
             className="w-full h-full object-cover"
+             style={{ background:"linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4))" }}
           />
         </div>
 
         {/* Content */}
         <div>
-          <h2 className="text-4xl xl:text-5xl font-bold mb-6">
+          <h2 className="text-4xl xl:text-5xl font-bold mb-6 animate-zoom-in">
             About Our Brand
           </h2>
 
@@ -73,3 +75,5 @@ export default function About() {
    </>
   );
 }
+
+     // ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}

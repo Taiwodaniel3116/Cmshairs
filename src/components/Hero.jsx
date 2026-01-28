@@ -1,26 +1,25 @@
 import { Link } from "react-router-dom";
-import useScrollFadeIn from "../hooks/useScrollFadeIn";
+// import useScrollFadeIn from "../hooks/useScrollFadeIn";
 
 const Hero = () => {
-  const { ref, isVisible } = useScrollFadeIn();
+  // const { ref, isVisible } = useScrollFadeIn();
 
   return (
     <>
       <div
-        ref={ref}
         className={`pl-3 pt-20 pb-9 h-max bg-cover bg- bg-center bg-no-repeat md:pl-10 md:pb-20 xl:pb-30 
           transition-all duration-700 ease-out 
-    ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+`}
         style={{ backgroundImage:"linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),  url('/images/cms-hero.jpg')" }}
       >
         <span className="bg-green-900 text-white py-4 px-6 rounded-full text-xs font-semibold xl:px-9 ">
           New Collection 2026
         </span>
 
-        <h1 className="font-bold text-7xl/18 pt-10 pb-6 text-gray-100 md:w-[5ch] xl:w-[15ch]">
+        <h1 className="font-bold text-7xl/18 pt-10 pb-6 text-gray-100 md:w-[5ch] xl:w-[15ch] animate-zoom-in">
           Premium Quality Hair Extensions
         </h1>
-        <p className="text-gray-100 text-[19px] md:w-[50ch] xl:w-[55ch]">
+        <p className="text-gray-100 text-[19px] md:w-[50ch] xl:w-[55ch] animate-zoom-in">
           Transform your look with our luxurious collection of 100% human hair
           wigs and extensions. Ethically sourced, expertly crafted.
         </p>
@@ -38,3 +37,7 @@ const Hero = () => {
 };
 
 export default Hero;
+
+        // ref={ref}
+
+    // ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}

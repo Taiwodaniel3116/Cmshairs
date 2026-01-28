@@ -5,7 +5,7 @@ import StarRating from "./StarRating";
 
 const HairAdvert = () => {
   // const { ref, isVisible } = useScrollFadeIn();
-    // ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+  // ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
   return (
     <>
       <div
@@ -33,7 +33,7 @@ const HairAdvert = () => {
                   <StarRating rating={advert.rating} />
                 </div>
                 <p className="ml-3 pt-2 text-[18px] font-bold text-green-900">
-                  #{item.price}
+                  #{item.price.toLocaleString()}
                 </p>
               </div>
             </div>
