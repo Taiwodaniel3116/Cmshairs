@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
 import { advert } from "../data/advert";
-// import useScrollFadeIn from "../hooks/useScrollFadeIn";
+import useScrollFadeIn from "../hooks/useScrollFadeIn";
+// import useScrollSlideIn from "../hooks/useScrollSlideIn";
 import StarRating from "./StarRating";
 
 const HairAdvert = () => {
-  // const { ref, isVisible } = useScrollFadeIn();
-  // ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+  const { ref, isVisible } = useScrollFadeIn();
+
   return (
     <>
       <div
-        // ref={ref}
-        className="pt-10 bg-green-50 pb-7
-        transition-all duration-700 ease-out"
+        ref={ref}
+        className={`pt-10 bg-green-50 pb-7
+        transition-all duration-700 ease-out
+            ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} `}
       >
         <h2 className="font-bold text-4xl text-center underline xl:text-5xl">
           BestSelling Styles
@@ -21,7 +23,7 @@ const HairAdvert = () => {
           {advert.map((item) => (
             <div key={item.id}>
               <div className="bg-white pb-5 border-gray-200 border-2 shadow-2xl shadow-gray-300 h-full rounded-3xl md:mx-3 xl:h-auto">
-                <div className=" rounded-3xl mx-2">
+                <div className={`rounded-3xl mx-2`}>
                   <img
                     className="w-38 h-40 m-auto mt-1 rounded-2xl hover:shadow-white shadow-2xl active:shadow-white md:w-fit md:h-fit"
                     src={item.image}
