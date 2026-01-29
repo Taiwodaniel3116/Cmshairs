@@ -16,7 +16,7 @@ const Hero = () => {
           New Collection 2026
         </span>
 
-        <h1 className="font-bold text-7xl/18 pt-10 pb-6 text-gray-100 md:w-[5ch] xl:w-[15ch] animate-zoom-in">
+        <h1 className="text-6xl font-bold sm:text-7xl/18 pt-10 pb-6 text-gray-100 md:w-[5ch] xl:w-[15ch] animate-zoom-in">
           Premium Quality Hair Extensions
         </h1>
         <p className="text-gray-100 text-[19px] md:w-[50ch] xl:w-[55ch] animate-zoom-in">
