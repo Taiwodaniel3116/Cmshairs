@@ -29,18 +29,18 @@ export default function AboutSection() {
             About Our Brand
           </h2>
 
-          <p className="text-gray-600 mb-4 leading-relaxed">
+          <p className="text-gray-600 mb-4 leading-relaxed text-center">
             We are a premium hair brand dedicated to providing high-quality,
             100% virgin human hair wigs designed to enhance confidence and
             beauty.
           </p>
 
-          <p className="text-gray-600 mb-4 leading-relaxed">
+          <p className="text-gray-600 mb-4 leading-relaxed text-center">
             Each wig is carefully sourced and crafted to deliver a natural
             look, soft texture, and long-lasting durability.
           </p>
 
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 leading-relaxed text-center">
             Our commitment to quality and customer satisfaction has earned
             the trust of happy clients across Nigeria.
           </p>

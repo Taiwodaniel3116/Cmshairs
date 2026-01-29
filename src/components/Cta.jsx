@@ -11,7 +11,8 @@ const Cta = () => {
     transition-all duration-700 ease-out bg-green-50
     ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
       <h2 className="font-bold text-4xl text-center m-auto w-[10ch] md:w-[20ch] xl:text-5xl">
-        Shop Your Perfect Wig
+        Shop Your Perfect Wig 
+        <span className="animate-bounce">🛒</span>
       </h2>
 
       <p className="pt-5 text-[18px] text-center m-auto md:w-[50ch] xl:w-[55ch] xl:text-[20px]">
