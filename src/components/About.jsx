@@ -25,9 +25,8 @@ export default function AboutSection() {
           ref={textAnim.ref}
           className={textAnim.className}
         >
-          <h2 className="text-4xl xl:text-5xl font-bold mb-6">
-            About 
-            <span className="underline"> Our </span>Brand
+          <h2 className="text-4xl xl:text-5xl font-bold mb-6 text-center">
+            About Our Brand
           </h2>
 
           <p className="text-gray-600 mb-4 leading-relaxed">

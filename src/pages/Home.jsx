@@ -18,7 +18,7 @@ const Home = ({ totalQuantity, cartItems }) => {
     <>
       <NavBar links={links} totalQuantity={totalQuantity} />
 
-      <div className="">
+      <div className="overflow-x-hidden">
         {/* Hero Section */}
         <Hero />
 

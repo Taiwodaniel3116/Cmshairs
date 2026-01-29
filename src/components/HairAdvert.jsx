@@ -10,7 +10,7 @@ const HairAdvert = () => {
     <>
       <div
         // ref={ref}
-        className="pt-23 bg-green-50 pb-7
+        className="pt-10 bg-green-50 pb-7
         transition-all duration-700 ease-out"
       >
         <h2 className="font-bold text-4xl text-center underline xl:text-5xl">
