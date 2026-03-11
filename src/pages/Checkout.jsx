@@ -50,32 +50,53 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
               Order Summary
             </div>
 
-            <div className="grid grid-cols-2 mb-3 bg-white w-[80%] py-5 px-2 rounded-3xl shadow-2xl shadow-gray-300 md:w-100 m-auto border-2 border-gray-200">
+            <div className="grid grid-cols-1 mb-3 bg-white w-[80%] py-5 px-2 rounded-3xl shadow-2xl shadow-gray-300 md:w-100 m-auto border-2 border-gray-200">
               {cartItems.map((cartItem, id) => (
                 <div
                   key={id}
                   className="border-b-[3.5px] border-r rounded-4xl border-gray-300"
                 >
-                  <div className="flex justify-center">
+                  <div className="flex">
+                    {" "}
+                    {/* removed justify-center */}
                     <img
                       src={cartItem.image}
                       alt="cart items"
-                      className="w-23 h-23 pt-2 pl-1 hover:shadow-white shadow-2xl active:shadow-white rounded-[15px]"
+                      className="w-25 h-25 pt-2 pl-1 hover:shadow-white shadow-2xl active:shadow-white rounded-[17px]"
                     />
+                    {/* Name and Quantity */}
+                    <div className="pt-5 px-2">
+                      <p className="text-center font-semibold text-[13px]">
+                        {cartItem.name} ({cartItem.quantity})
+                      </p>
+                      {/* Inches */}
+                      <p className="text-sm text-gray-600">
+                        {cartItem.selectedInch}inches
+                      </p>
+                      {/* Product price */}
+                      <p className="font-bold">
+                        #
+                        {(
+                          cartItem.inchesPricing[cartItem.selectedInch] *
+                          cartItem.quantity
+                        ).toLocaleString()}
+                      </p>
+                    </div>
+                    {/*  */}
                   </div>
-                  <p className="text-center font-semibold text-[13px]">
+                  {/* <p className="text-center font-semibold text-[13px]">
                     {cartItem.name} ({cartItem.quantity})
-                  </p>
-                  <p className="text-center text-sm text-gray-600">
+                  </p> */}
+                  {/* <p className="text-center text-sm text-gray-600">
                     {cartItem.selectedInch}inches
-                  </p>
-                  <p className="text-center text-green-900 font-bold">
+                  </p> */}
+                  {/* <p className="text-center text-green-900 font-bold">
                     #
                     {(
                       cartItem.inchesPricing[cartItem.selectedInch] *
                       cartItem.quantity
                     ).toLocaleString()}
-                  </p>
+                  </p> */}
                 </div>
               ))}
             </div>
@@ -84,16 +105,12 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
             <div className="flex flex-col gap-5 bg-white w-75 m-auto px-3 py-2 rounded-2xl border-2 border-gray-200">
               <div className="flex justify-between">
                 <span className="text-black font-bold ">Discount:</span>
-                <span className="text-green-900 font-bold">
-                  ___
-                </span>
+                <span className="text-green-900 font-bold">___</span>
               </div>
 
               <div className="flex justify-between">
                 <span className="text-black font-bold ">Delivery Fee:</span>
-                <span className="text-green-900 font-bold">
-                  ___
-                </span>
+                <span className="text-green-900 font-bold">___</span>
               </div>
 
               {/* <div className="flex justify-between">
@@ -112,9 +129,12 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
                 </span>
               </div>
             </div>
-             <div className="bg-green-200 mt-2 w-75 m-auto pl-2 rounded-2xl py-1">
-              <p>Note: Discount and delivery details will be discussed via chat 💬 ↡</p>
-              </div>
+            <div className="bg-green-200 mt-2 w-75 m-auto pl-2 rounded-2xl py-1">
+              <p>
+                Note: Discount and delivery details will be discussed via chat
+                💬 ↡
+              </p>
+            </div>
 
             {/*  */}
 

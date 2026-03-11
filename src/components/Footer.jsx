@@ -29,9 +29,9 @@ const Footer = () => {
           <p className="text-white font-bold mt-4">Follow Us</p>
 
         <nav className="text-white flex flex-col pt-3 text-[15px] md:font-semibold">
-          <Link className="pb-2" to="/facebook.com">Facebook</Link>
-          <Link className="pb-2" to="/instagram.com">Instagram</Link>
-          <Link to="/tiktok.com">TikTok</Link>
+          <Link className="pb-2 hover:text-yellow-500" to="/facebook.com">Facebook</Link>
+          <Link className="pb-2 hover:text-yellow-500" to="/instagram.com">Instagram</Link>
+          <Link className="hover:text-yellow-500" to="/tiktok.com ">TikTok</Link>
         </nav>
         </div>
         </div>

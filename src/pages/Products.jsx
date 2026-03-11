@@ -47,7 +47,7 @@ const Products = ({ addToCart, totalQuantity }) => {
       {/*  */}
 
       <div className="animate-fadeIn">
-        <h1 className="font-bold text-4xl text-center pt-5 mt-8 md:text-5xl">
+        <h1 className="font-bold text-4xl text-center pt-8 md:text-5xl">
           {" "}
           Our Products
         </h1>
@@ -55,8 +55,9 @@ const Products = ({ addToCart, totalQuantity }) => {
           Discover our premium collection of hair extensions and wigs.
         </p>
 
-        {/* Category UI */}
-        <div className="bg-gray-50 w-fit m-auto px-7 py-5 mt-10 rounded-2xl">
+        {/* Category Search bar UI */}
+        <div className="bg-gray-50 w-fit m-auto px-7 py-5 mt-10 rounded-2xl md:flex gap-3">
+          {/* Category Ui */}
           <div className="flex justify-center">
             <select
               value={selectedCategory}
@@ -77,7 +78,7 @@ const Products = ({ addToCart, totalQuantity }) => {
               placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className=" text-sm px-10 py-2 rounded-full border border-gray-300  md:px-20"
+              className=" text-sm px-10 py-2 rounded-full border border-gray-300 md:px-35 md:py-4 lg:px-60"
             />
             {/* Search Icon */}
             {/* <button
@@ -105,7 +106,7 @@ const Products = ({ addToCart, totalQuantity }) => {
         </div>
 
         {/* Products List*/}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6  mt-10">
+        <div className=" pb-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6  mt-10">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product) => (
               <div key={product.id}>
