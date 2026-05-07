@@ -54,7 +54,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
               {cartItems.map((cartItem, id) => (
                 <div
                   key={id}
-                  className="border-b-[3.5px] border-r rounded-4xl border-gray-300"
+                  className="border-b-[3.5px] border-r rounded-4xl border-gray-200 pt-4 pb-4 mb-3"
                 >
                   <div className="flex">
                     {" "}
@@ -66,15 +66,15 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
                     />
                     {/* Name and Quantity */}
                     <div className="pt-5 px-2">
-                      <p className="text-center font-semibold text-[13px]">
+                      <p className="font-semibold text-[13px]">
                         {cartItem.name} ({cartItem.quantity})
                       </p>
                       {/* Inches */}
                       <p className="text-sm text-gray-600">
-                        {cartItem.selectedInch}inches
+                        Length: {cartItem.selectedInch}inches
                       </p>
                       {/* Product price */}
-                      <p className="font-bold">
+                      <p className="font-bold text-green-800">
                         #
                         {(
                           cartItem.inchesPricing[cartItem.selectedInch] *
@@ -84,6 +84,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
                     </div>
                     {/*  */}
                   </div>
+
                   {/* <p className="text-center font-semibold text-[13px]">
                     {cartItem.name} ({cartItem.quantity})
                   </p> */}
@@ -104,12 +105,12 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
             {/*  */}
             <div className="flex flex-col gap-5 bg-white w-75 m-auto px-3 py-2 rounded-2xl border-2 border-gray-200">
               <div className="flex justify-between">
-                <span className="text-black font-bold ">Discount:</span>
+                <span className="text-black">Discount:</span>
                 <span className="text-green-900 font-bold">___</span>
               </div>
 
               <div className="flex justify-between">
-                <span className="text-black font-bold ">Delivery Fee:</span>
+                <span className="text-black">Delivery Fee:</span>
                 <span className="text-green-900 font-bold">___</span>
               </div>
 
@@ -121,7 +122,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
               </div> */}
 
               <div className="flex justify-between">
-                <span className="text-black font-bold uppercase">
+                <span className="text-black font-semibold uppercase">
                   ORDER Total:
                 </span>
                 <span className="text-green-900 font-bold border-b">
@@ -129,7 +130,7 @@ const Checkout = ({ cartItems, totalQuantity, totalPrice }) => {
                 </span>
               </div>
             </div>
-            <div className="bg-green-200 mt-2 w-75 m-auto pl-2 rounded-2xl py-1">
+            <div className="bg-green-100 mt-2 w-75 m-auto pl-2 rounded-2xl py-1">
               <p>
                 Note: Discount and delivery details will be discussed via chat
                 💬 ↡
