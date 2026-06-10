@@ -17,7 +17,7 @@ const Products = ({ addToCart, totalQuantity }) => {
     "Curly",
   ];
   const [selectedCategory, setSelectedCategory] = useState("All Categories"); //
-
+  
   //Filter products based on search
   // const filteredProducts = products.filter((product) =>
   //   product.name.toLowerCase().includes(searchQuery.toLowerCase())

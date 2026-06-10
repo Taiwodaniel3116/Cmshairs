@@ -36,7 +36,7 @@ const Cart = ({
         {cartItems.length === 0 ? (
           <EmptyCartState />
         ) : (
-          <>
+          <div className="">
             <h1 className="font-bold text-4xl text-center pb-3 pt-5 mt-8 md:text-5xl">
               Shopping Cart
             </h1>
@@ -166,7 +166,7 @@ const Cart = ({
             <div className="mt-7 mb-2 w-fit h-max m-auto font-semibold bg-green-900 shadow-2xs shadow-green-200 text-white px-10 py-4 rounded-full  transition duration-300 hover:bg-green-700 active:bg-green-700">
               <Link to="/checkout">Proceed to Checkout</Link>
             </div>
-          </>
+          </div>
         )}
       </div>
       <Footer />
